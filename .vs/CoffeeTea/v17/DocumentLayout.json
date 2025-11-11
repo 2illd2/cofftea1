@@ -1,0 +1,1740 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\consultant\\controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\consultant\\controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\consultant\\models\\articleitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\consultant\\models\\articleitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\consultant\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\consultant\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\consultant\\views\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\consultant\\views\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\coffeetea.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\coffeetea.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\apicoffeetea.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\apicoffeetea.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\migrations\\20251107180711_baseline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\migrations\\20251107180711_baseline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\migrations\\20251107183039_addauditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\migrations\\20251107183039_addauditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\account\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\account\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\admin\\products\\views\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\admin\\products\\views\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\admin\\products\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\admin\\products\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\admin\\products\\models\\adminproductvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\admin\\products\\models\\adminproductvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\admin\\products\\models\\adminproductlistitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\admin\\products\\models\\adminproductlistitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\admin\\products\\controllers\\adminproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\admin\\products\\controllers\\adminproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\admin\\category\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\admin\\category\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\admin\\category\\views\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\admin\\category\\views\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\admin\\category\\controllers\\adminarticlecategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\admin\\category\\controllers\\adminarticlecategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\articles\\views\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\articles\\views\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\articles\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\articles\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\articles\\models\\articlepublicvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\articles\\models\\articlepublicvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\articles\\controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\articles\\controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\cart\\views\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\cart\\views\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\cart\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\cart\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\cart\\views\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\cart\\views\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\cart\\models\\checkoutvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\cart\\models\\checkoutvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\cart\\models\\cartvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\cart\\models\\cartvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\cart\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\cart\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\catalog\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\catalog\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\catalog\\views\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\catalog\\views\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\catalog\\views\\_productcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\catalog\\views\\_productcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\catalog\\models\\catalogfiltervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\catalog\\models\\catalogfiltervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\catalog\\controllers\\catalogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\catalog\\controllers\\catalogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\chat\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\chat\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\chat\\models\\chatvms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\chat\\models\\chatvms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\chat\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\chat\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\home\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\home\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\home\\views\\_productcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\home\\views\\_productcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\views\\shared\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\views\\shared\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\home\\views\\_home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\home\\views\\_home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\favorites\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\favorites\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\favorites\\models\\favoritesvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\favorites\\models\\favoritesvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\favorites\\controllers\\favoritescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\favorites\\controllers\\favoritescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\utils\\httpcontextuserextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\utils\\httpcontextuserextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\infrastructure\\rolenames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\infrastructure\\rolenames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\infrastructure\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\infrastructure\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\infrastructure\\apiauthhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\infrastructure\\apiauthhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\dto\\medtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\dto\\medtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\dto\\contracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\dto\\contracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\dto\\catalogdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\dto\\catalogdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\dto\\cartdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\dto\\cartdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\dto\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\dto\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\dto\\articledtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\dto\\articledtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\dto\\adminproductdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\dto\\adminproductdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\dto\\addressdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\dto\\addressdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\controllers\\mecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\controllers\\mecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\controllers\\homecardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\controllers\\homecardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\controllers\\catalogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\controllers\\catalogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\controllers\\articlecategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\controllers\\articlecategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\controllers\\adminproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\controllers\\adminproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\controllers\\adminarticlecategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\controllers\\adminarticlecategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\controllers\\addressescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\controllers\\addressescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\order_item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\order_item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\order_status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\order_status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\chat_thread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\chat_thread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\chat_message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\chat_message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\coupon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\coupon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\article_category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\article_category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\konox\\AppData\\Local\\Temp\\.vsdbgsrc\\5e4dbef361365caabfb56f962a9679daa55fbf0e20d2e3eb49825b9aa4b489ac\\RuntimeType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\data\\product_detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\data\\product_detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\account\\views\\_profilecard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\account\\views\\_profilecard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\account\\models\\profilevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\account\\models\\profilevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\account\\views\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\account\\views\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\account\\views\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\account\\views\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\coffeetea\\pages\\account\\views\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6733E780-7E31-48A3-ADBE-15F7003E493F}|CoffeeTea\\CoffeeTea.csproj|solutionrelative:coffeetea\\pages\\account\\views\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\apicoffeetea.csproj.backup.tmp||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\apicoffeetea.csproj.backup.tmp||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|c:\\users\\konox\\source\\repos\\coffeetea\\apicoffeetea\\apicoffeetea.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{754CD17A-12BB-41F4-AD3E-B7659D88FF0C}|ApiCoffeeTea\\ApiCoffeeTea.csproj|solutionrelative:apicoffeetea\\apicoffeetea.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Products\\Views\\Edit.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Admin\\Products\\Views\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Products\\Views\\Edit.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Admin\\Products\\Views\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-23T11:29:07.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CoffeeTea.csproj",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\CoffeeTea.csproj",
+              "RelativeDocumentMoniker": "CoffeeTea\\CoffeeTea.csproj",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\CoffeeTea.csproj",
+              "RelativeToolTip": "CoffeeTea\\CoffeeTea.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-18T11:33:38.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20251107180711_Baseline.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Migrations\\20251107180711_Baseline.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Migrations\\20251107180711_Baseline.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Migrations\\20251107180711_Baseline.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Migrations\\20251107180711_Baseline.cs",
+              "ViewState": "AgIAALoCAAAAAAAAAAAAwNACAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T18:17:36.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ArticlesController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Consultant\\Controllers\\ArticlesController.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Consultant\\Controllers\\ArticlesController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Consultant\\Controllers\\ArticlesController.cs*",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Consultant\\Controllers\\ArticlesController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T09:50:05.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ArticleItemVm.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Consultant\\Models\\ArticleItemVm.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Consultant\\Models\\ArticleItemVm.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Consultant\\Models\\ArticleItemVm.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Consultant\\Models\\ArticleItemVm.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T09:58:44.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Consultant\\Views\\Edit.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Consultant\\Views\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Consultant\\Views\\Edit.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Consultant\\Views\\Edit.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T09:51:24.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Consultant\\Views\\Index.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Consultant\\Views\\Index.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Consultant\\Views\\Index.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Consultant\\Views\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T09:51:06.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApiCoffeeTea.csproj",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\ApiCoffeeTea.csproj",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\ApiCoffeeTea.csproj",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\ApiCoffeeTea.csproj",
+              "RelativeToolTip": "ApiCoffeeTea\\ApiCoffeeTea.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-18T10:52:44.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Program.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Program.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Program.cs",
+              "RelativeToolTip": "CoffeeTea\\Program.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAawC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:26:33.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\appsettings.json",
+              "RelativeDocumentMoniker": "CoffeeTea\\appsettings.json",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\appsettings.json",
+              "RelativeToolTip": "CoffeeTea\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-18T11:36:37.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Account\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Account\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Account\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Account\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T12:04:30.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T18:28:09.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20251107183039_AddAuditLog.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Migrations\\20251107183039_AddAuditLog.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Migrations\\20251107183039_AddAuditLog.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Migrations\\20251107183039_AddAuditLog.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Migrations\\20251107183039_AddAuditLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T18:31:31.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "CoffeeTea\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "CoffeeTea\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-18T11:06:07.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Products\\Views\\Index.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Admin\\Products\\Views\\Index.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Products\\Views\\Index.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Admin\\Products\\Views\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-23T11:28:24.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AdminProductVm.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Products\\Models\\AdminProductVm.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Admin\\Products\\Models\\AdminProductVm.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Products\\Models\\AdminProductVm.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Admin\\Products\\Models\\AdminProductVm.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA/wAIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T11:26:47.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AdminProductListItemVm.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Products\\Models\\AdminProductListItemVm.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Admin\\Products\\Models\\AdminProductListItemVm.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Products\\Models\\AdminProductListItemVm.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Admin\\Products\\Models\\AdminProductListItemVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T11:47:07.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AdminProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Products\\Controllers\\AdminProductsController.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Admin\\Products\\Controllers\\AdminProductsController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Products\\Controllers\\AdminProductsController.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Admin\\Products\\Controllers\\AdminProductsController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAD4v0gAAAACAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T11:27:26.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Category\\Views\\Index.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Admin\\Category\\Views\\Index.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Category\\Views\\Index.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Admin\\Category\\Views\\Index.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAAcAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T10:47:02.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Category\\Views\\Edit.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Admin\\Category\\Views\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Category\\Views\\Edit.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Admin\\Category\\Views\\Edit.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T10:47:52.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AdminArticleCategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Category\\Controllers\\AdminArticleCategoryController.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Admin\\Category\\Controllers\\AdminArticleCategoryController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Admin\\Category\\Controllers\\AdminArticleCategoryController.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Admin\\Category\\Controllers\\AdminArticleCategoryController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAwwB8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T10:46:13.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Articles\\Views\\Details.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Articles\\Views\\Details.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Articles\\Views\\Details.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Articles\\Views\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T11:29:01.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Articles\\Views\\Index.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Articles\\Views\\Index.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Articles\\Views\\Index.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Articles\\Views\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T11:27:50.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ArticlePublicVm.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Articles\\Models\\ArticlePublicVm.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Articles\\Models\\ArticlePublicVm.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Articles\\Models\\ArticlePublicVm.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Articles\\Models\\ArticlePublicVm.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA5wA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T11:30:04.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ArticlesController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Articles\\Controllers\\ArticlesController.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Articles\\Controllers\\ArticlesController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Articles\\Controllers\\ArticlesController.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Articles\\Controllers\\ArticlesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T11:27:33.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Checkout.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Cart\\Views\\Checkout.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Cart\\Views\\Checkout.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Cart\\Views\\Checkout.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Cart\\Views\\Checkout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T16:29:56.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Cart\\Views\\Index.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Cart\\Views\\Index.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Cart\\Views\\Index.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Cart\\Views\\Index.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAF0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-23T12:06:01.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Success.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Cart\\Views\\Success.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Cart\\Views\\Success.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Cart\\Views\\Success.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Cart\\Views\\Success.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T17:31:06.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CheckoutVm.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Cart\\Models\\CheckoutVm.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Cart\\Models\\CheckoutVm.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Cart\\Models\\CheckoutVm.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Cart\\Models\\CheckoutVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T16:28:37.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CartVm.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Cart\\Models\\CartVm.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Cart\\Models\\CartVm.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Cart\\Models\\CartVm.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Cart\\Models\\CartVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T12:04:30.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Cart\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Cart\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Cart\\Controllers\\CartController.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Cart\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T12:05:25.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Catalog\\Views\\Index.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Catalog\\Views\\Index.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Catalog\\Views\\Index.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Catalog\\Views\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-23T11:02:36.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Catalog\\Views\\Details.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Catalog\\Views\\Details.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Catalog\\Views\\Details.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Catalog\\Views\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAL4AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-23T11:03:48.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_ProductCard.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Catalog\\Views\\_ProductCard.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Catalog\\Views\\_ProductCard.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Catalog\\Views\\_ProductCard.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Catalog\\Views\\_ProductCard.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-23T11:03:02.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CatalogFilterVm.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Catalog\\Models\\CatalogFilterVm.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Catalog\\Models\\CatalogFilterVm.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Catalog\\Models\\CatalogFilterVm.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Catalog\\Models\\CatalogFilterVm.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAuwBIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T11:00:43.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CatalogController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Catalog\\Controllers\\CatalogController.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Catalog\\Controllers\\CatalogController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Catalog\\Controllers\\CatalogController.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Catalog\\Controllers\\CatalogController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T11:01:15.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Chat\\Views\\Index.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Chat\\Views\\Index.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Chat\\Views\\Index.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Chat\\Views\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-27T13:21:12.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ChatVms.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Chat\\Models\\ChatVms.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Chat\\Models\\ChatVms.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Chat\\Models\\ChatVms.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Chat\\Models\\ChatVms.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T13:36:19.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Chat\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Chat\\Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Chat\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Chat\\Controllers\\ChatController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T13:20:19.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Home\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Home\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Home\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Home\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:01:08.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "_ProductCard.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Home\\Views\\_ProductCard.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Home\\Views\\_ProductCard.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Home\\Views\\_ProductCard.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Home\\Views\\_ProductCard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T11:03:38.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "_Header.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Views\\Shared\\_Header.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Views\\Shared\\_Header.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Views\\Shared\\_Header.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Views\\Shared\\_Header.cshtml",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAAwBcAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T11:04:51.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Views\\Shared\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Views\\Shared\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Views\\Shared\\_ViewImports.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Views\\Shared\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T15:35:12.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T11:05:13.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "_Home.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Home\\Views\\_Home.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Home\\Views\\_Home.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Home\\Views\\_Home.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Home\\Views\\_Home.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T11:02:53.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Favorites\\Views\\Index.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Favorites\\Views\\Index.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Favorites\\Views\\Index.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Favorites\\Views\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T11:34:43.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "FavoritesVm.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Favorites\\Models\\FavoritesVm.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Favorites\\Models\\FavoritesVm.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Favorites\\Models\\FavoritesVm.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Favorites\\Models\\FavoritesVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T11:35:17.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "FavoritesController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Favorites\\Controllers\\FavoritesController.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Favorites\\Controllers\\FavoritesController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Favorites\\Controllers\\FavoritesController.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Favorites\\Controllers\\FavoritesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T11:36:04.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "HttpContextUserExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Utils\\HttpContextUserExtensions.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Utils\\HttpContextUserExtensions.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Utils\\HttpContextUserExtensions.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Utils\\HttpContextUserExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T10:01:12.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "RoleNames.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Infrastructure\\RoleNames.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Infrastructure\\RoleNames.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Infrastructure\\RoleNames.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Infrastructure\\RoleNames.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T09:35:28.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "DataSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Infrastructure\\DataSeeder.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Infrastructure\\DataSeeder.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Infrastructure\\DataSeeder.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Infrastructure\\DataSeeder.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwDYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T11:22:24.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ApiAuthHandler.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Infrastructure\\ApiAuthHandler.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Infrastructure\\ApiAuthHandler.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Infrastructure\\ApiAuthHandler.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Infrastructure\\ApiAuthHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T10:42:54.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "MeDtos.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\MeDtos.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\DTO\\MeDtos.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\MeDtos.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\DTO\\MeDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T10:00:34.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Contracts.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\Contracts.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\DTO\\Contracts.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\Contracts.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\DTO\\Contracts.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:22:00.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "CatalogDtos.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\CatalogDtos.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\DTO\\CatalogDtos.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\CatalogDtos.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\DTO\\CatalogDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T10:58:25.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "CartDtos.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\CartDtos.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\DTO\\CartDtos.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\CartDtos.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\DTO\\CartDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T12:00:55.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "AuthDtos.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\AuthDtos.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\DTO\\AuthDtos.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\AuthDtos.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\DTO\\AuthDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:58:33.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ArticleDtos.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\ArticleDtos.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\DTO\\ArticleDtos.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\ArticleDtos.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\DTO\\ArticleDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T09:46:05.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "AdminProductDtos.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\AdminProductDtos.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\DTO\\AdminProductDtos.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\AdminProductDtos.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\DTO\\AdminProductDtos.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA9wAkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T11:24:52.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "AddressDtos.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\AddressDtos.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\DTO\\AddressDtos.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\DTO\\AddressDtos.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\DTO\\AddressDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T16:14:43.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAwwFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T12:02:12.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T17:17:46.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "MeController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\MeController.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Controllers\\MeController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\MeController.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Controllers\\MeController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAQwCYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T10:01:32.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "HomeCardsController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\HomeCardsController.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Controllers\\HomeCardsController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\HomeCardsController.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Controllers\\HomeCardsController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwA8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:20:45.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Controllers\\ChatController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T13:17:09.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "CatalogController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\CatalogController.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Controllers\\CatalogController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\CatalogController.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Controllers\\CatalogController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T10:59:20.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\CartController.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T12:03:37.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:57:30.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "ArticlesController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\ArticlesController.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Controllers\\ArticlesController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\ArticlesController.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Controllers\\ArticlesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T09:49:02.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "ArticleCategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\ArticleCategoriesController.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Controllers\\ArticleCategoriesController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\ArticleCategoriesController.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Controllers\\ArticleCategoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T09:49:25.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "AdminProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\AdminProductsController.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Controllers\\AdminProductsController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\AdminProductsController.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Controllers\\AdminProductsController.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAowI4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T11:25:17.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "AdminArticleCategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\AdminArticleCategoriesController.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Controllers\\AdminArticleCategoriesController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\AdminArticleCategoriesController.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Controllers\\AdminArticleCategoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T10:45:11.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "AddressesController.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\AddressesController.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Controllers\\AddressesController.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Controllers\\AddressesController.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Controllers\\AddressesController.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAowH0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T16:14:58.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAJcBAAAAAAAAAAAAAJwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:23:11.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "article.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\article.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\article.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\article.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\article.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAswB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:19:32.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "order_status.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\order_status.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\order_status.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\order_status.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\order_status.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T11:58:47.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "order_item.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\order_item.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\order_item.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\order_item.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\order_item.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAuwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T11:58:40.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "address.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\address.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\address.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\address.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\address.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:44:25.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "user.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\user.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\user.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\user.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\user.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAIwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:56:17.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\appsettings.json",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\appsettings.json",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\appsettings.json",
+              "RelativeToolTip": "ApiCoffeeTea\\appsettings.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwvx4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-18T10:51:47.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Program.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Program.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Program.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Program.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:35:25.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "shipment.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\shipment.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\shipment.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\shipment.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\shipment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T13:13:21.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "coupon.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\coupon.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\coupon.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\coupon.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\coupon.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T13:13:30.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "chat_message.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\chat_message.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\chat_message.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\chat_message.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\chat_message.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAiwAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T13:15:43.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "chat_thread.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\chat_thread.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\chat_thread.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\chat_thread.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\chat_thread.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T13:15:48.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "review.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\review.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\review.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\review.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\review.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T13:13:13.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "article_category.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\article_category.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\article_category.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\article_category.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\article_category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:19:27.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "role.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\role.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\role.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\role.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:56:26.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "product.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\product.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\product.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\product.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\product.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAswC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:01:52.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "cart.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\cart.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\cart.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\cart.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\cart.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:14:07.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "order.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\order.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\order.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\order.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T11:58:10.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "payment.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\payment.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\payment.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\payment.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\payment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T11:59:13.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "RuntimeType.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\AppData\\Local\\Temp\\.vsdbgsrc\\5e4dbef361365caabfb56f962a9679daa55fbf0e20d2e3eb49825b9aa4b489ac\\RuntimeType.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\5e4dbef361365caabfb56f962a9679daa55fbf0e20d2e3eb49825b9aa4b489ac\\RuntimeType.cs",
+              "ToolTip": "C:\\Users\\konox\\AppData\\Local\\Temp\\.vsdbgsrc\\5e4dbef361365caabfb56f962a9679daa55fbf0e20d2e3eb49825b9aa4b489ac\\RuntimeType.cs",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\5e4dbef361365caabfb56f962a9679daa55fbf0e20d2e3eb49825b9aa4b489ac\\RuntimeType.cs",
+              "ViewState": "AgIAAIwMAAAAAAAAAAAmwKEMAAAUAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T12:54:16.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 96,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Account\\Views\\Profile.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Account\\Views\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Account\\Views\\Profile.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Account\\Views\\Profile.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAwJUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-23T10:05:36.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "product_detail.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\product_detail.cs",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\Data\\product_detail.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\Data\\product_detail.cs",
+              "RelativeToolTip": "ApiCoffeeTea\\Data\\product_detail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T11:06:56.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "_ProfileCard.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Account\\Views\\_ProfileCard.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Account\\Views\\_ProfileCard.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Account\\Views\\_ProfileCard.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Account\\Views\\_ProfileCard.cshtml",
+              "ViewState": "AgIAALIAAAAAAAAAAAAUwNcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-23T10:05:58.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "ProfileVm.cs",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Account\\Models\\ProfileVm.cs",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Account\\Models\\ProfileVm.cs",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Account\\Models\\ProfileVm.cs",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Account\\Models\\ProfileVm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T10:03:39.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 97,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Account\\Views\\Register.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Account\\Views\\Register.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Account\\Views\\Register.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Account\\Views\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T12:05:29.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 98,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Account\\Views\\Login.cshtml",
+              "RelativeDocumentMoniker": "CoffeeTea\\Pages\\Account\\Views\\Login.cshtml",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\Pages\\Account\\Views\\Login.cshtml",
+              "RelativeToolTip": "CoffeeTea\\Pages\\Account\\Views\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-18T12:05:05.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 100,
+              "Title": "ApiCoffeeTea.http",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\ApiCoffeeTea.http",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\ApiCoffeeTea.http",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\ApiCoffeeTea.http",
+              "RelativeToolTip": "ApiCoffeeTea\\ApiCoffeeTea.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-09-18T11:44:45.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 99,
+              "Title": "ApiCoffeeTea.csproj.Backup.tmp",
+              "DocumentMoniker": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\ApiCoffeeTea.csproj.Backup.tmp",
+              "RelativeDocumentMoniker": "ApiCoffeeTea\\ApiCoffeeTea.csproj.Backup.tmp",
+              "ToolTip": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\ApiCoffeeTea.csproj.Backup.tmp",
+              "RelativeToolTip": "ApiCoffeeTea\\ApiCoffeeTea.csproj.Backup.tmp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-18T11:44:48.484Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

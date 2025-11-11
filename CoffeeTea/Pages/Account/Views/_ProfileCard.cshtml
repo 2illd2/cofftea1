@@ -1,0 +1,216 @@
+﻿@using CoffeeTea.Pages.Account.Models
+@model ProfileVm
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <!-- Заголовок профиля -->
+            <div class="text-center mb-5">
+                <h2 class="h1 fw-bold text-gradient-coffee mb-3">Мой профиль</h2>
+                <p class="text-muted lead">Управляйте вашими данными и настройками</p>
+            </div>
+
+            <!-- Карточка профиля -->
+            <div class="card shadow-hover border-0 rounded-4">
+                <div class="card-body p-5">
+                    <!-- Шапка профиля -->
+                    <div class="d-flex justify-content-between align-items-start mb-4 pb-3 border-bottom border-coffee-light">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-gradient-coffee rounded-circle p-3 me-4">
+                                <i class="fas fa-user fa-2x text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="fw-bold text-dark-brown mb-1">@Model.FirstName @Model.LastName</h4>
+                                <div class="text-muted">
+                                    <i class="fas fa-shield-alt me-1"></i>@Model.Role •
+                                    <i class="fas fa-calendar me-1 ms-2"></i>С нами с @Model.CreatedAt.ToString("dd.MM.yyyy")
+                                </div>
+                            </div>
+                        </div>
+                        <span class="badge bg-tea text-white fs-6 px-3 py-2 rounded-pill">
+                            <i class="fas fa-envelope me-1"></i>@Model.Email
+                        </span>
+                    </div>
+
+                    <!-- Форма редактирования -->
+                    <form asp-action="SaveProfile" asp-controller="Account" method="post" class="needs-validation" novalidate>
+                        @Html.AntiForgeryToken()
+
+                        <input type="hidden" asp-for="Id" />
+                        <input type="hidden" asp-for="Email" />
+                        <input type="hidden" asp-for="Role" />
+                        <input type="hidden" asp-for="CreatedAt" />
+
+                        <div class="row g-4">
+                            <!-- Имя -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-dark-brown">
+                                    <i class="fas fa-user me-2"></i>Имя *
+                                </label>
+                                <input class="form-control rounded-3 border-coffee" asp-for="FirstName"
+                                       placeholder="Введите ваше имя" />
+                                <span class="text-danger small mt-1" asp-validation-for="FirstName"></span>
+                            </div>
+
+                            <!-- Фамилия -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-dark-brown">
+                                    <i class="fas fa-users me-2"></i>Фамилия *
+                                </label>
+                                <input class="form-control rounded-3 border-coffee" asp-for="LastName"
+                                       placeholder="Введите вашу фамилию" />
+                                <span class="text-danger small mt-1" asp-validation-for="LastName"></span>
+                            </div>
+
+                            <!-- Отчество -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-dark-brown">
+                                    <i class="fas fa-user-circle me-2"></i>Отчество
+                                </label>
+                                <input class="form-control rounded-3 border-coffee" asp-for="MiddleName"
+                                       placeholder="Введите ваше отчество" />
+                            </div>
+
+                            <!-- Телефон -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-dark-brown">
+                                    <i class="fas fa-phone me-2"></i>Телефон
+                                </label>
+                                <input class="form-control rounded-3 border-coffee" asp-for="Phone"
+                                       placeholder="+7 (999) 999-99-99" />
+                            </div>
+
+                            <!-- Email (readonly) -->
+                            <div class="col-12">
+                                <label class="form-label fw-semibold text-dark-brown">
+                                    <i class="fas fa-envelope me-2"></i>Email
+                                </label>
+                                <div class="input-group">
+                                    <input class="form-control rounded-3 border-coffee bg-light"
+                                           asp-for="Email" readonly />
+                                    <span class="input-group-text bg-coffee text-white border-coffee">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </div>
+                                <div class="form-text text-muted">Email нельзя изменить</div>
+                            </div>
+                        </div>
+
+                        <!-- Кнопки действий -->
+                        <div class="d-flex gap-3 justify-content-end mt-5 pt-3 border-top border-coffee-light">
+                            <a class="btn btn-outline-coffee rounded-pill px-4" href="/profile">
+                                <i class="fas fa-sync me-2"></i>Обновить
+                            </a>
+                            <button type="submit" class="btn btn-coffee rounded-pill px-4">
+                                <i class="fas fa-save me-2"></i> Сохранить изменения
+                            </button>
+                        </div>
+
+                        <!-- Ошибки валидации -->
+                        @if (!ViewData.ModelState.IsValid)
+                        {
+                            <div class="alert alert-danger mt-4 rounded-3 border-0">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-exclamation-triangle me-3 fa-lg"></i>
+                                    <div>
+                                        <h6 class="alert-heading mb-2">Ошибки заполнения формы:</h6>
+                                        <ul class="mb-0 ps-3">
+                                            @foreach (var kv in ViewData.ModelState)
+                                            {
+                                                foreach (var err in kv.Value.Errors)
+                                                {
+                                                    <li>@err.ErrorMessage</li>
+                                                }
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </form>
+                </div>
+            </div>
+
+            <!-- Дополнительные карточки профиля -->
+            <div class="row mt-4">
+                <!-- Быстрые действия -->
+                <div class="col-md-6">
+                    <div class="card shadow-hover border-0 rounded-4 h-100">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold text-dark-brown mb-3">
+                                <i class="fas fa-bolt me-2"></i>Быстрые действия
+                            </h5>
+                            <div class="d-grid gap-2">
+                                <a href="/orders" class="btn btn-outline-coffee text-start">
+                                    <i class="fas fa-history me-2"></i>Мои заказы
+                                </a>
+                                <a href="/cart" class="btn btn-outline-coffee text-start">
+                                    <i class="fas fa-shopping-cart me-2"></i>Корзина
+                                </a>
+                                <a href="/favorites" class="btn btn-outline-coffee text-start">
+                                    <i class="fas fa-heart me-2"></i>Избранное
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Статистика -->
+                <div class="col-md-6">
+                    <div class="card shadow-hover border-0 rounded-4 h-100">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold text-dark-brown mb-3">
+                                <i class="fas fa-chart-bar me-2"></i>Моя активность
+                            </h5>
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <div class="text-coffee fw-bold fs-4">12</div>
+                                    <div class="text-muted small">Заказов</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="text-tea fw-bold fs-4">5</div>
+                                    <div class="text-muted small">Отзывов</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="text-caramel fw-bold fs-4">7</div>
+                                    <div class="text-muted small">В избранном</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Валидация формы
+        document.addEventListener('DOMContentLoaded', function () {
+            const forms = document.querySelectorAll('.needs-validation');
+
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+
+            // Анимация при фокусе
+            const inputs = document.querySelectorAll('.form-control');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.classList.add('input-focused');
+                });
+                input.addEventListener('blur', function() {
+                    this.parentElement.classList.remove('input-focused');
+                });
+            });
+        });
+    </script>
+}

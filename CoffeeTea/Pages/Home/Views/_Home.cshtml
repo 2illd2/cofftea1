@@ -1,0 +1,49 @@
+﻿@model List<ApiCoffeeTea.DTO.HomeCardDto>
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Главная";
+}
+
+<main class="container pb-5">
+    <section class="hero-section bg-gradient-primary text-white rounded-4 p-5 mb-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-3">Кофе и чай премиум-класса</h1>
+                <p class="lead mb-4">Откройте для себя мир изысканных вкусов и ароматов</p>
+                <a href="/catalog" class="btn btn-light btn-lg px-4 py-2 rounded-pill fw-semibold">Перейти в каталог</a>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="hero-image-placeholder rounded-4 p-4 bg-white bg-opacity-10">
+                    <i class="fas fa-mug-hot display-1 opacity-75"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4 mb-5">
+        <div class="text-center mb-5">
+            <h2 class="h1 fw-bold text-gradient">Лента предложений и новостей</h2>
+            <p class="text-muted lead">Откройте для себя новые вкусы и акции</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            @foreach (var card in Model)
+            {
+                @await Html.PartialAsync("~/Pages/Home/Views/_ProductCard.cshtml", card)
+            }
+        </div>
+    </section>
+
+    <section class="mt-5 pt-5">
+        <div class="bg-light rounded-4 p-5 text-center">
+            <h3 class="h2 fw-bold mb-3">Присоединяйтесь к нашему клубу</h3>
+            <p class="text-muted mb-4">Получайте эксклюзивные предложения и новости первыми</p>
+            <div class="d-flex gap-2 justify-content-center">
+                <input type="email" class="form-control w-50 rounded-pill" placeholder="Ваш email">
+                <button class="btn btn-primary rounded-pill px-4">Подписаться</button>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,367 @@
+﻿@using CoffeeTea.Pages.Catalog.Models
+@model ProductDetailVm
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = Model.Name;
+}
+
+<div class="container py-5">
+    <!-- Хлебные крошки -->
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/" class="text-coffee text-decoration-none"><i class="fas fa-home me-1"></i>Главная</a></li>
+            <li class="breadcrumb-item"><a href="/catalog" class="text-coffee text-decoration-none">Каталог</a></li>
+            <li class="breadcrumb-item"><a href="/catalog?type=@Model.Type" class="text-coffee text-decoration-none">@(Model.Type == "coffee" ? "Кофе" : "Чай")</a></li>
+            <li class="breadcrumb-item active text-dark-brown">@Model.Name</li>
+        </ol>
+    </nav>
+
+    <div class="row g-5">
+        <!-- Левая колонка - изображение -->
+        <div class="col-lg-6">
+            <div class="card border-0 shadow-hover rounded-4 overflow-hidden">
+                <img src="@(!string.IsNullOrEmpty(Model.ImageUrl) ? Model.ImageUrl : "https://via.placeholder.com/600x400?text=Coffee+Tea")"
+                     class="w-100 rounded-4" alt="@Model.Name"
+                     onerror="this.src='https://via.placeholder.com/600x400?text=Coffee+Tea'"
+                     id="mainImage" style="max-height: 500px; object-fit: cover;" />
+
+                <!-- Бейджи на изображении -->
+                <div class="position-absolute top-0 start-0 m-3">
+                    <span class="badge @(Model.Type == "coffee" ? "bg-coffee" : "bg-tea") rounded-pill px-3 py-2">
+                        <i class="fas @(Model.Type == "coffee" ? "fa-coffee" : "fa-leaf") me-1"></i>
+                        @(Model.Type == "coffee" ? "Кофе" : "Чай")
+                    </span>
+                </div>
+
+                @if (Model.Quantity > 0)
+                {
+                    <div class="position-absolute top-0 end-0 m-3">
+                        <span class="badge bg-success rounded-pill px-3 py-2">
+                            <i class="fas fa-check me-1"></i>В наличии
+                        </span>
+                    </div>
+                }
+                else
+                {
+                    <div class="position-absolute top-0 end-0 m-3">
+                        <span class="badge bg-danger rounded-pill px-3 py-2">
+                            <i class="fas fa-clock me-1"></i>Под заказ
+                        </span>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <!-- Правая колонка - информация -->
+        <div class="col-lg-6">
+            <div class="ps-lg-4">
+                <!-- Заголовок и SKU -->
+                <h1 class="display-5 fw-bold text-gradient-coffee mb-2">@Model.Name</h1>
+                <div class="text-muted mb-4">
+                    <i class="fas fa-barcode me-2"></i>Артикул: @Model.Sku
+                </div>
+
+                <!-- Цена -->
+                <div class="d-flex align-items-baseline mb-4">
+                    <div class="h2 fw-bold text-coffee me-3">@Model.Price.ToString("C")</div>
+                    <div class="text-muted">/ 100г</div>
+                </div>
+
+                <!-- Краткое описание -->
+                @if (!string.IsNullOrWhiteSpace(Model.Description))
+                {
+                    <p class="lead text-muted mb-4">@Model.Description</p>
+                }
+
+                <!-- Характеристики -->
+                <div class="card border-0 bg-light-brown rounded-4 mb-4">
+                    <div class="card-body">
+                        <h5 class="fw-bold text-dark-brown mb-3">
+                            <i class="fas fa-info-circle me-2"></i>Характеристики
+                        </h5>
+                        <div class="row g-3">
+                            @if (!string.IsNullOrWhiteSpace(Model.RoastLevel))
+                            {
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-fire text-coffee me-2"></i>
+                                        <div>
+                                            <div class="small text-muted">Уровень обжарки</div>
+                                            <div class="fw-semibold">@Model.RoastLevel</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            @if (!string.IsNullOrWhiteSpace(Model.Processing))
+                            {
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-cogs text-coffee me-2"></i>
+                                        <div>
+                                            <div class="small text-muted">Метод обработки</div>
+                                            <div class="fw-semibold">@Model.Processing</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            @if (!string.IsNullOrWhiteSpace(Model.OriginCountry))
+                            {
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-globe-americas text-coffee me-2"></i>
+                                        <div>
+                                            <div class="small text-muted">Страна происхождения</div>
+                                            <div class="fw-semibold">@Model.OriginCountry</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            @if (!string.IsNullOrWhiteSpace(Model.OriginRegion))
+                            {
+                                <div class="col-sm-6">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-map-marker-alt text-coffee me-2"></i>
+                                        <div>
+                                            <div class="small text-muted">Регион</div>
+                                            <div class="fw-semibold">@Model.OriginRegion</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-box text-coffee me-2"></i>
+                                    <div>
+                                        <div class="small text-muted">Наличие</div>
+                                        <div class="fw-semibold @(Model.Quantity > 0 ? "text-success" : "text-danger")">
+                                            @(Model.Quantity > 0 ? $"{Model.Quantity} шт." : "Нет в наличии")
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма добавления в корзину -->
+                <form asp-controller="Cart" asp-action="Add" method="post" class="card border-0 rounded-4 mb-4">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="ProductId" value="@Model.Id" />
+
+                    <div class="card-body">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label class="form-label fw-semibold">Количество:</label>
+                            </div>
+                            <div class="col-auto">
+                                <div class="input-group" style="width: 140px;">
+                                    <button type="button" class="btn btn-outline-coffee" onclick="decreaseQuantity()">-</button>
+                                    <input type="number" class="form-control text-center border-coffee"
+                                           id="quantity" name="Qty" value="1" min="1" max="@Model.Quantity" />
+                                    <button type="button" class="btn btn-outline-coffee" onclick="increaseQuantity()">+</button>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-coffee rounded-pill px-4 py-2 fw-semibold w-100"
+                                @(Model.Quantity == 0 ? "disabled" : "")>
+                                    <i class="fas fa-cart-plus me-2"></i>Добавить в корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+                <!-- Быстрые действия -->
+                <div class="d-flex gap-2 mb-4">
+                    <button class="btn btn-outline-coffee rounded-pill favorite-btn flex-fill">
+                        <i class="fas fa-heart me-2"></i>В избранное
+                    </button>
+                    <button class="btn btn-outline-coffee rounded-pill flex-fill">
+                        <i class="fas fa-share-alt me-2"></i>Поделиться
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Детальная информация -->
+    <div class="row mt-5 g-4">
+        @if (!string.IsNullOrWhiteSpace(Model.LongDescription))
+        {
+            <div class="col-lg-6">
+                <div class="card border-0 rounded-4 h-100">
+                    <div class="card-body">
+                        <h4 class="fw-bold text-dark-brown mb-3">
+                            <i class="fas fa-file-alt me-2"></i>Описание
+                        </h4>
+                        <div class="text-muted">@Html.Raw(Model.LongDescription)</div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(Model.BrewingGuide))
+        {
+            <div class="col-lg-6">
+                <div class="card border-0 rounded-4 h-100">
+                    <div class="card-body">
+                        <h4 class="fw-bold text-dark-brown mb-3">
+                            <i class="fas fa-mug-hot me-2"></i>Как заваривать
+                        </h4>
+                        <div class="text-muted">@Html.Raw(Model.BrewingGuide)</div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(Model.FlavorNotes))
+        {
+            <div class="col-lg-6">
+                <div class="card border-0 rounded-4 h-100">
+                    <div class="card-body">
+                        <h4 class="fw-bold text-dark-brown mb-3">
+                            <i class="fas fa-wine-glass-alt me-2"></i>Вкусовые ноты
+                        </h4>
+                        <p class="text-muted">@Model.FlavorNotes</p>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(Model.OriginDetails))
+        {
+            <div class="col-lg-6">
+                <div class="card border-0 rounded-4 h-100">
+                    <div class="card-body">
+                        <h4 class="fw-bold text-dark-brown mb-3">
+                            <i class="fas fa-mountain me-2"></i>Происхождение
+                        </h4>
+                        <div class="text-muted">@Html.Raw(Model.OriginDetails)</div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Кнопка возврата -->
+    <div class="text-center mt-5">
+        <a href="/catalog" class="btn btn-outline-coffee rounded-pill px-4">
+            <i class="fas fa-arrow-left me-2"></i>Вернуться в каталог
+        </a>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        /* Специфичные стили для страницы товара */
+        .breadcrumb {
+            background: transparent;
+            padding: 0;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--chocolate);
+        }
+
+        .bg-light-brown {
+            background: linear-gradient(135deg, rgba(245, 222, 179, 0.2), rgba(255, 248, 225, 0.3)) !important;
+        }
+
+        /* Стили для счетчика количества */
+        .input-group .btn {
+            border-color: var(--coffee-light);
+            color: var(--coffee-medium);
+        }
+
+            .input-group .btn:hover {
+                background: var(--coffee-light);
+                color: white;
+            }
+
+        /* Адаптивность */
+        @@media (max-width: 768px) {
+            .display-5 {
+                font-size: 2rem;
+            }
+
+            .ps-lg-4 {
+                padding-left: 0 !important;
+            }
+        }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        // Управление количеством товара
+        function increaseQuantity() {
+            const input = document.getElementById('quantity');
+            const max = parseInt(input.max) || 999;
+            if (parseInt(input.value) < max) {
+                input.value = parseInt(input.value) + 1;
+            }
+        }
+
+        function decreaseQuantity() {
+            const input = document.getElementById('quantity');
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+
+        // Добавление в корзину
+        async function addToCart(productId) {
+            const quantity = parseInt(document.getElementById('quantity').value);
+
+            try {
+                const response = await fetch('/api/cart/add', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        productId: productId,
+                        quantity: quantity
+                    })
+                });
+
+                if (response.ok) {
+                    // Показываем уведомление об успехе
+                    showNotification('Товар добавлен в корзину!', 'success');
+                } else {
+                    showNotification('Ошибка при добавлении в корзину', 'error');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showNotification('Ошибка сети', 'error');
+            }
+        }
+
+        function showNotification(message, type) {
+            // Создаем простое уведомление
+            const alert = document.createElement('div');
+            alert.className = `alert alert-${type} position-fixed top-0 end-0 m-3 rounded-4`;
+            alert.style.zIndex = '9999';
+            alert.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check' : 'exclamation'}-circle me-2"></i>
+                ${message}
+            `;
+            document.body.appendChild(alert);
+
+            setTimeout(() => {
+                alert.remove();
+            }, 3000);
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            // Устанавливаем максимальное значение количества
+            const quantityInput = document.getElementById('quantity');
+            if (quantityInput) {
+                quantityInput.max = @Model.Quantity;
+            }
+        });
+    </script>
+}

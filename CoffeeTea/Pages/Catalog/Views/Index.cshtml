@@ -1,0 +1,227 @@
+﻿@using CoffeeTea.Pages.Catalog.Models
+@model CatalogPageVm
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Каталог";
+}
+
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-gradient-coffee mb-3">Наш каталог</h1>
+        <p class="text-muted lead">Откройте для себя мир премиального кофе и элитного чая</p>
+    </div>
+
+    <!-- Форма фильтров и поиска -->
+    <form method="get" asp-controller="Catalog" asp-action="Index" id="catalogFilterForm">
+        <input type="hidden" name="Page" value="@Model.Page" />
+        <input type="hidden" name="PageSize" value="@Model.PageSize" />
+        <input type="hidden" name="SortBy" id="sortInput" value="@Model.Filter.SortBy" />
+
+        <div class="card shadow-hover border-0 rounded-4 mb-5">
+            <div class="card-body p-4">
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-4">
+                        <label class="form-label fw-semibold text-dark-brown">
+                            <i class="fas fa-search me-2"></i>Поиск по названию
+                        </label>
+                        <input name="Q" class="form-control rounded-3 border-coffee"
+                               placeholder="Например: Эфиопия или Улун"
+                               value="@Model.Filter.Q" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <label class="form-label fw-semibold text-dark-brown">Цена от</label>
+                        <input name="MinPrice" class="form-control rounded-3 border-coffee"
+                               type="number" step="0.01"
+                               value="@(Model.Filter.MinPrice?.ToString(System.Globalization.CultureInfo.InvariantCulture))" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <label class="form-label fw-semibold text-dark-brown">Цена до</label>
+                        <input name="MaxPrice" class="form-control rounded-3 border-coffee"
+                               type="number" step="0.01"
+                               value="@(Model.Filter.MaxPrice?.ToString(System.Globalization.CultureInfo.InvariantCulture))" />
+                    </div>
+
+                    <div class="col-md-2">
+                        <label class="form-label fw-semibold text-dark-brown">
+                            <i class="fas fa-tag me-2"></i>Тип товара
+                        </label>
+                        @using Microsoft.AspNetCore.Mvc.Rendering
+                        @{
+                            var typeItems = new List<SelectListItem>
+                        {
+                        new("Все товары", "", string.IsNullOrEmpty(Model.Filter.Type)),
+                        new("Кофе", "coffee", Model.Filter.Type == "coffee"),
+                        new("Чай",  "tea",    Model.Filter.Type == "tea")
+                        };
+                        }
+                        @Html.DropDownList("Type", typeItems, htmlAttributes: new { @class = "form-select rounded-3 border-coffee" })
+                    </div>
+
+                    <div class="col-md-2">
+                        <button class="btn btn-coffee rounded-pill w-100 py-2 fw-semibold" type="submit">
+                            <i class="fas fa-filter me-2"></i>Применить
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Статистика и сортировка -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="text-muted">
+            <i class="fas fa-coffee me-1"></i>
+            Найдено товаров: <span class="fw-bold text-coffee">@Model.Total</span>
+            @if (!string.IsNullOrEmpty(Model.Filter.Q))
+            {
+                <span> по запросу "<span class="fw-bold">@Model.Filter.Q</span>"</span>
+            }
+        </div>
+
+        <div class="dropdown">
+            <button class="btn btn-outline-coffee rounded-pill dropdown-toggle" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-sort me-2"></i>
+                @(
+                    Model.Filter.SortBy switch
+                    {
+                        "priceAsc" => "По цене (возр.)",
+                        "priceDesc" => "По цене (убыв.)",
+                        "newest" => "По новизне",
+                        _ => "По популярности"
+                    }
+                    )
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item sort-item" data-sort="popularity" href="#">По популярности</a></li>
+                <li><a class="dropdown-item sort-item" data-sort="priceAsc" href="#">По цене (возр.)</a></li>
+                <li><a class="dropdown-item sort-item" data-sort="priceDesc" href="#">По цене (убыв.)</a></li>
+                <li><a class="dropdown-item sort-item" data-sort="newest" href="#">По новизне</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Сетка товаров -->
+    <div class="row g-4">
+        @if (Model.Items.Any())
+        {
+            @foreach (var p in Model.Items)
+            {
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    @await Html.PartialAsync("~/Pages/Catalog/Views/_ProductCard.cshtml", p)
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-12 text-center py-5">
+                <div class="card border-0 rounded-4 bg-light">
+                    <div class="card-body py-5">
+                        <i class="fas fa-search fa-3x text-muted mb-3"></i>
+                        <h4 class="text-dark-brown mb-3">Товары не найдены</h4>
+                        <p class="text-muted mb-4">Попробуйте изменить параметры фильтрации</p>
+                        <a href="@Url.Action("Index","Catalog")" class="btn btn-coffee rounded-pill px-4">
+                            <i class="fas fa-redo me-2"></i>Сбросить фильтры
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Пагинация -->
+    @if (Model.TotalPages > 1)
+    {
+        <nav class="mt-5" aria-label="Навигация по страницам">
+            <ul class="pagination justify-content-center">
+                <li class="page-item @(Model.Page == 1 ? "disabled" : "")">
+                    <a class="page-link rounded-pill me-2"
+                       href="@Url.Action("Index","Catalog", new {
+                           Q = Model.Filter.Q,
+                           Type = Model.Filter.Type,
+                           MinPrice = Model.Filter.MinPrice,
+                           MaxPrice = Model.Filter.MaxPrice,
+                           SortBy = Model.Filter.SortBy,
+                           page = Model.Page - 1,
+                           pageSize = Model.PageSize
+                       })">
+                        <i class="fas fa-chevron-left me-1"></i> Назад
+                    </a>
+                </li>
+
+                @{
+                    int current = Model.Page;
+                    int startPage = Math.Max(1, current - 2);
+                    int endPage = Math.Min(Model.TotalPages, current + 2);
+                    for (int i = startPage; i <= endPage; i++)
+                    {
+                        var cls = "page-item" + (i == current ? " active" : "");
+                        <li class="@cls">
+                            <a class="page-link"
+                               href="@Url.Action("Index","Catalog", new {
+                                   Q = Model.Filter.Q,
+                                   Type = Model.Filter.Type,
+                                   MinPrice = Model.Filter.MinPrice,
+                                   MaxPrice = Model.Filter.MaxPrice,
+                                   SortBy = Model.Filter.SortBy,
+                                   page = i,
+                                   pageSize = Model.PageSize
+                               })">@i</a>
+                        </li>
+                    }
+                }
+
+                <li class="page-item @(Model.Page == Model.TotalPages ? "disabled" : "")">
+                    <a class="page-link rounded-pill ms-2"
+                       href="@Url.Action("Index","Catalog", new {
+                           Q = Model.Filter.Q,
+                           Type = Model.Filter.Type,
+                           MinPrice = Model.Filter.MinPrice,
+                           MaxPrice = Model.Filter.MaxPrice,
+                           SortBy = Model.Filter.SortBy,
+                           page = Model.Page + 1,
+                           pageSize = Model.PageSize
+                       })">
+                        Вперед <i class="fas fa-chevron-right ms-1"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('catalogFilterForm');
+            const pageInput = form.querySelector('input[name="Page"]');
+            const sortInput = document.getElementById('sortInput');
+
+            // Автоприменение фильтров
+            form.querySelectorAll('input[name="Q"], input[name="MinPrice"], input[name="MaxPrice"], select[name="Type"]').forEach(el => {
+                el.addEventListener('change', () => {
+                    pageInput.value = 1;
+                    form.submit();
+                });
+            });
+
+            // Сортировка
+            document.querySelectorAll('.sort-item').forEach(a => {
+                a.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    sortInput.value = a.dataset.sort;
+                    pageInput.value = 1;
+                    form.submit();
+                });
+            });
+
+            // Анимация карточек
+            document.querySelectorAll('.col-12.col-sm-6.col-lg-4.col-xl-3').forEach((card, i) => {
+                card.style.animationDelay = `${i * 0.1}s`;
+            });
+        });
+    </script>
+}

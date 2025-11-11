@@ -1,0 +1,96 @@
+﻿@model CheckoutVm
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Адрес доставки";
+}
+
+<div class="container py-5">
+    <h1 class="h3 fw-bold mb-4">Адрес доставки</h1>
+
+    @if (TempData["CheckoutError"] is string error && !string.IsNullOrWhiteSpace(error))
+    {
+        <div class="alert alert-danger">@error</div>
+    }
+
+    <form method="post" action="/cart/checkout">
+        @Html.AntiForgeryToken()
+
+        @if (Model.Addresses.Any())
+        {
+            <div class="mb-4">
+                <label class="form-label fw-semibold">Выберите сохранённый адрес</label>
+                <select name="SelectedAddressId" class="form-select" id="address-select">
+                    <option value="0">— Новый адрес —</option>
+                    @foreach (var a in Model.Addresses)
+                    {
+                        <option value="@a.Id" selected="@(Model.SelectedAddressId == a.Id)">
+                            @a.Line1, @a.City, @a.PostalCode
+                            @(a.IsDefault ? " (по умолчанию)" : "")
+                        </option>
+                    }
+                </select>
+            </div>
+        }
+
+        <div class="card border-0 bg-light rounded-4 mb-4" id="new-address-section">
+            <div class="card-body">
+                <h5 class="mb-3">Новый адрес</h5>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <input class="form-control" name="NewAddress.Line1" placeholder="Улица, дом, квартира" required />
+                    </div>
+                    <div class="col-md-6">
+                        <input class="form-control" name="NewAddress.City" placeholder="Город" required />
+                    </div>
+                    <div class="col-md-6">
+                        <input class="form-control" name="NewAddress.PostalCode" placeholder="Индекс" required />
+                    </div>
+                    <div class="col-12">
+                        <input class="form-control" name="NewAddress.Country" placeholder="Страна" value="Россия" required />
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="NewAddress.IsDefault" id="isDefault" value="true">
+                            <label class="form-check-label" for="isDefault">Сделать адресом по умолчанию</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4 d-flex gap-2">
+            <a href="/cart" class="btn btn-outline-secondary">Назад в корзину</a>
+            <button type="submit" class="btn btn-primary">Оформить заказ</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addressSelect = document.getElementById('address-select');
+            const newAddressSection = document.getElementById('new-address-section');
+
+            if (addressSelect) {
+                function toggleNewAddressFields() {
+                    if (addressSelect.value === '0') {
+                        newAddressSection.style.display = 'block';
+
+                        document.querySelectorAll('#new-address-section [name]').forEach(field => {
+                            if (field.type !== 'checkbox') field.required = true;
+                        });
+                    } else {
+                        newAddressSection.style.display = 'none';
+
+                        document.querySelectorAll('#new-address-section [name]').forEach(field => {
+                            field.required = false;
+                        });
+                    }
+                }
+
+                addressSelect.addEventListener('change', toggleNewAddressFields);
+                toggleNewAddressFields();
+            }
+        });
+    </script>
+}

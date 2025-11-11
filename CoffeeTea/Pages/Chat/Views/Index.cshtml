@@ -1,0 +1,43 @@
+﻿@model CoffeeTea.Pages.Chat.Models.ChatThreadVm
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Чат с консультантом";
+    var myId = int.TryParse(User.FindFirst("UserId")?.Value, out var uid) ? uid : 0;
+}
+
+<div class="container py-5">
+    <h1 class="h4 mb-4"><i class="fas fa-comments me-2"></i> Чат с консультантом</h1>
+
+    <div class="card shadow-sm rounded-4">
+        <div class="card-body" style="max-height: 420px; overflow-y: auto;">
+            @foreach (var m in Model.Messages.OrderBy(m => m.CreatedAt))
+            {
+                var mine = m.SenderId == myId;
+                <div class="d-flex @(mine ? "justify-content-end" : "justify-content-start") mb-2">
+                    <div class="p-2 rounded-3 @(mine ? "bg-primary text-white" : "bg-light")" style="max-width: 70%;">
+                        <div>@m.Text</div>
+                        <div class="text-muted small mt-1">
+                            @m.CreatedAt.ToLocalTime().ToString("t") @(!string.IsNullOrEmpty(m.SenderName) ? $" · {m.SenderName}" : "")
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        @if (TempData["ChatError"] is string err)
+        {
+            <div class="alert alert-warning rounded-4">@err</div>
+        }
+
+        <p class="text-muted small">Thread ID: @Model.ThreadId, сообщений: @Model.Messages.Count</p>
+
+
+        <div class="card-footer bg-light">
+            <form method="post" action="/chat/send" class="d-flex gap-2">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="threadId" value="@Model.ThreadId" />
+                <input name="text" class="form-control" placeholder="Введите сообщение..." required />
+                <button class="btn btn-primary rounded-pill px-3"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+</div>

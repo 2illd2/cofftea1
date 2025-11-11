@@ -1,0 +1,784 @@
+﻿
+:root {
+    /* Основные цвета кофе */
+    --coffee-dark: #8B4513;
+    --coffee-medium: #A0522D;
+    --coffee-light: #D2691E;
+    --chocolate: #5D4037;
+    /* Цвета чая */
+    --tea-green: #4CAF50;
+    --tea-dark-green: #388E3C;
+    --tea-light-green: #8BC34A;
+    /* Нейтральные цвета */
+    --cream: #FFF8E1;
+    --beige: #F5F5DC;
+    --almond: #FFEBCD;
+    --wheat: #F5DEB3;
+    /* Акцентные цвета */
+    --caramel: #D2691E;
+    --gold: #FFD700;
+    --citrus: #FFA726;
+    /* Фон и текст */
+    --bg-light: #FFF8E1;
+    --bg-cream: #FCF5E6;
+    --text-dark: #5D4037;
+    --text-medium: #795548;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    padding-top: 80px;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+}
+
+/* Цветовые классы */
+.text-coffee {
+    color: var(--coffee-dark) !important;
+}
+
+.text-tea {
+    color: var(--tea-dark-green) !important;
+}
+
+.text-dark-brown {
+    color: var(--chocolate) !important;
+}
+
+.bg-light-cream {
+    background-color: var(--cream) !important;
+}
+
+.bg-tea-light {
+    background-color: rgba(76, 175, 80, 0.1) !important;
+}
+
+/* Градиенты */
+.bg-gradient-coffee {
+    background: linear-gradient(135deg, var(--coffee-dark) 0%, var(--coffee-medium) 50%, var(--coffee-light) 100%) !important;
+}
+
+.bg-gradient-tea {
+    background: linear-gradient(135deg, var(--tea-dark-green) 0%, var(--tea-green) 50%, var(--tea-light-green) 100%) !important;
+}
+
+.bg-gradient-brown {
+    background: linear-gradient(135deg, var(--coffee-dark), var(--coffee-medium)) !important;
+}
+
+/* Текстовые градиенты */
+.text-gradient-coffee {
+    background: linear-gradient(135deg, var(--coffee-dark), var(--coffee-medium));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-gradient-tea {
+    background: linear-gradient(135deg, var(--tea-dark-green), var(--tea-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Дополнительные радиусы */
+.rounded-4 {
+    border-radius: 1.5rem !important;
+}
+
+.rounded-5 {
+    border-radius: 2rem !important;
+}
+
+/* Навигация */
+.navbar {
+    padding: 1rem 0;
+    box-shadow: 0 2px 20px rgba(139, 69, 19, 0.08);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 248, 225, 0.95) !important;
+    border-bottom: 2px solid var(--coffee-medium);
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-weight: 500;
+    color: var(--text-dark) !important;
+}
+
+    .nav-link:hover {
+        background: linear-gradient(135deg, var(--coffee-dark), var(--coffee-medium));
+        color: white !important;
+        transform: translateY(-2px);
+    }
+
+/* Кнопки */
+.btn-outline-coffee {
+    border: 2px solid var(--coffee-dark);
+    color: var(--coffee-dark);
+    transition: all 0.3s ease;
+}
+
+    .btn-outline-coffee:hover {
+        background: var(--coffee-dark);
+        border-color: var(--coffee-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+    }
+
+.btn-outline-tea {
+    border: 2px solid var(--tea-dark-green);
+    color: var(--tea-dark-green);
+    transition: all 0.3s ease;
+}
+
+    .btn-outline-tea:hover {
+        background: var(--tea-dark-green);
+        border-color: var(--tea-dark-green);
+        color: white !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(56, 142, 60, 0.3);
+    }
+
+.btn-coffee {
+    background: linear-gradient(135deg, var(--coffee-dark), var(--coffee-medium));
+    border: none;
+    transition: all 0.3s ease;
+}
+
+    .btn-coffee:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(139, 69, 19, 0.4);
+        background: linear-gradient(135deg, var(--coffee-medium), var(--coffee-dark));
+    }
+
+.btn-tea {
+    background: linear-gradient(135deg, var(--tea-dark-green), var(--tea-green));
+    border: none;
+    transition: all 0.3s ease;
+}
+
+    .btn-tea:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(56, 142, 60, 0.4);
+        background: linear-gradient(135deg, var(--tea-green), var(--tea-dark-green));
+    }
+
+/* Карточки */
+.shadow-hover {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(139, 69, 19, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--wheat);
+    background: white;
+}
+
+    .shadow-hover:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+.card-image-container {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.shadow-hover:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Бейджи */
+.badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+    .badge.bg-coffee {
+        background: linear-gradient(135deg, var(--coffee-medium), var(--coffee-light)) !important;
+        color: white !important;
+    }
+
+    .badge.bg-tea {
+        background: linear-gradient(135deg, var(--tea-green), var(--tea-light-green)) !important;
+        color: white !important;
+    }
+
+    .badge.bg-gold {
+        background: linear-gradient(135deg, #FFD700, #FFA500) !important;
+        color: var(--chocolate) !important;
+    }
+
+/* Hero секция */
+.hero-section {
+    margin-top: 2rem;
+    box-shadow: 0 20px 40px rgba(139, 69, 19, 0.15);
+    background: linear-gradient(135deg, var(--coffee-dark) 0%, var(--coffee-medium) 100%);
+}
+
+.hero-image-placeholder {
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Специальные классы для товаров */
+.coffee-card {
+    border-left: 4px solid var(--coffee-medium);
+}
+
+.tea-card {
+    border-left: 4px solid var(--tea-green);
+}
+
+/* Утилиты */
+.fw-semibold {
+    font-weight: 600 !important;
+}
+
+.text-caramel {
+    color: var(--caramel) !important;
+}
+
+.bg-citrus {
+    background-color: rgba(255, 167, 38, 0.1) !important;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse:hover {
+    animation: pulse 2s infinite;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .hero-section {
+        text-align: center;
+        padding: 2rem !important;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .navbar {
+        padding: 0.5rem 0;
+    }
+}
+
+/* Декоративные элементы */
+.coffee-bean {
+    color: var(--coffee-medium);
+    display: inline-block;
+}
+
+.tea-leaf {
+    color: var(--tea-green);
+    display: inline-block;
+}
+
+/* Иконки */
+.icon-coffee::before {
+    content: "☕";
+    margin-right: 0.5rem;
+}
+
+.icon-tea::before {
+    content: "🍵";
+    margin-right: 0.5rem;
+}
+/* ==================== */
+/* СТИЛИ ДЛЯ ФОРМ */
+/* ==================== */
+
+/* Поля ввода */
+.form-control {
+    border: 2px solid var(--wheat);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: var(--cream);
+}
+
+    .form-control:focus {
+        border-color: var(--coffee-medium);
+        box-shadow: 0 0 0 0.2rem rgba(139, 69, 19, 0.25);
+        background-color: white;
+    }
+
+    .form-control.border-coffee {
+        border-color: var(--coffee-light);
+    }
+
+.form-label {
+    font-weight: 600;
+    color: var(--chocolate);
+    margin-bottom: 0.5rem;
+}
+
+/* Группы ввода */
+.input-group .btn-outline-coffee {
+    border-left: 0;
+    border-color: var(--coffee-light);
+}
+
+.input-group .form-control:focus + .btn-outline-coffee {
+    border-color: var(--coffee-medium);
+}
+
+/* Валидация */
+.was-validated .form-control:valid {
+    border-color: var(--tea-green);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%234CAF50' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+}
+
+.was-validated .form-control:invalid {
+    border-color: #dc3545;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath d='m5.8 3.6.4.4.4-.4'/%3e%3cpath d='M6 7v2'/%3e%3c/svg%3e");
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+.form-text {
+    font-size: 0.875rem;
+    color: var(--text-medium);
+}
+
+/* Карточка формы */
+.card {
+    background: linear-gradient(135deg, rgba(255, 248, 225, 0.8), rgba(245, 222, 179, 0.6));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+/* Анимации */
+.form-control {
+    transition: all 0.3s ease;
+}
+
+    .form-control:hover {
+        border-color: var(--coffee-medium);
+        transform: translateY(-1px);
+    }
+
+/* Иконки в формах */
+.fas {
+    color: var(--coffee-medium);
+}
+
+/* Адаптивность для форм */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 2rem !important;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Дополнительные утилиты */
+.rounded-3 {
+    border-radius: 0.75rem !important;
+}
+
+.bg-form {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Эффекты при наведении на кнопки формы */
+.btn-coffee:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+}
+
+/* Ссылки в формах */
+a.text-coffee {
+    transition: all 0.3s ease;
+}
+
+    a.text-coffee:hover {
+        color: var(--coffee-dark) !important;
+        text-decoration: underline !important;
+    }
+
+/* Кастомный скроллбар для форм */
+.form-control::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-control::-webkit-scrollbar-track {
+    background: var(--cream);
+    border-radius: 4px;
+}
+
+.form-control::-webkit-scrollbar-thumb {
+    background: var(--coffee-light);
+    border-radius: 4px;
+}
+
+    .form-control::-webkit-scrollbar-thumb:hover {
+        background: var(--coffee-medium);
+    }
+/* ==================== */
+/* СТИЛИ ДЛЯ ФОРМЫ ВХОДА */
+/* ==================== */
+
+/* Чекбоксы */
+.form-check-input {
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: 0.15em;
+    border: 2px solid var(--coffee-light);
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+
+    .form-check-input:checked {
+        background-color: var(--coffee-medium);
+        border-color: var(--coffee-medium);
+    }
+
+    .form-check-input:focus {
+        border-color: var(--coffee-medium);
+        box-shadow: 0 0 0 0.2rem rgba(139, 69, 19, 0.25);
+    }
+
+.form-check-label {
+    cursor: pointer;
+    color: var(--chocolate);
+    font-weight: 500;
+}
+
+/* Социальные кнопки */
+.btn-outline-coffee.rounded-circle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+    .btn-outline-coffee.rounded-circle:hover {
+        transform: translateY(-3px) scale(1.1);
+        background: var(--coffee-medium);
+        color: white !important;
+    }
+
+/* Разделитель */
+.position-relative hr {
+    border-top: 2px solid var(--coffee-light);
+    opacity: 0.6;
+}
+
+.position-absolute {
+    background: linear-gradient(135deg, var(--cream), white);
+    padding: 0 1rem;
+}
+
+/* Адаптивность для формы входа */
+@media (max-width: 576px) {
+    .card-body {
+        padding: 1.5rem !important;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .btn-outline-coffee.rounded-circle {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Анимация появления формы */
+.card {
+    animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Эффект фокуса для полей ввода */
+.form-control:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.1);
+}
+
+/* Специфичные стили для формы входа */
+.login-container {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Иконки в социальных кнопках */
+.fab {
+    font-size: 1.2rem;
+}
+
+/* Эффект наведения на ссылки */
+a.text-coffee {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+    a.text-coffee:hover {
+        color: var(--coffee-dark) !important;
+        transform: translateX(5px);
+    }
+
+        a.text-coffee:hover::after {
+            content: '→';
+            margin-left: 5px;
+            position: absolute;
+        }
+/* ==================== */
+/* СТИЛИ ДЛЯ ПРОФИЛЯ */
+/* ==================== */
+
+/* Аватар профиля */
+.bg-gradient-coffee {
+    background: linear-gradient(135deg, var(--coffee-dark), var(--coffee-medium)) !important;
+}
+
+/* Бейджи профиля */
+.badge.bg-tea {
+    background: linear-gradient(135deg, var(--tea-dark-green), var(--tea-green)) !important;
+}
+
+/* Границы */
+.border-coffee-light {
+    border-color: rgba(139, 69, 19, 0.2) !important;
+}
+
+/* Поля ввода профиля */
+.input-group-text.bg-coffee {
+    background: linear-gradient(135deg, var(--coffee-dark), var(--coffee-medium)) !important;
+    border-color: var(--coffee-medium) !important;
+}
+
+/* Анимация фокуса для полей */
+.input-focused .form-label {
+    color: var(--coffee-dark) !important;
+    transform: translateY(-2px);
+}
+
+.input-focused .form-control {
+    border-color: var(--coffee-medium) !important;
+    box-shadow: 0 0 0 0.2rem rgba(139, 69, 19, 0.15);
+}
+
+/* Карточки быстрых действий */
+.btn-outline-coffee.text-start {
+    text-align: left !important;
+    transition: all 0.3s ease;
+    border: 2px solid var(--coffee-light);
+}
+
+    .btn-outline-coffee.text-start:hover {
+        background: var(--coffee-light);
+        color: white;
+        transform: translateX(5px);
+    }
+
+/* Статистика */
+.text-caramel {
+    color: var(--caramel) !important;
+}
+
+/* Адаптивность профиля */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 2rem !important;
+    }
+
+    .d-flex.align-items-center {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bg-gradient-coffee {
+        margin-bottom: 1rem;
+    }
+
+    .badge.fs-6 {
+        font-size: 0.8rem !important;
+        margin-top: 1rem;
+    }
+}
+
+/* Алерты в стиле сайта */
+.alert-danger {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(220, 53, 69, 0.05));
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    color: #721c24;
+}
+
+    .alert-danger .alert-heading {
+        color: #721c24;
+    }
+
+/* Иконки в заголовках */
+.fa-bolt, .fa-chart-bar {
+    color: var(--coffee-medium);
+}
+
+/* Эффекты при наведении на карточки */
+.card:hover {
+    transform: translateY(-2px);
+}
+/* ==================== */
+/* СТИЛИ ЛИЧНОГО КАБИНЕТА */
+/* ==================== */
+
+/* Анимации загрузки */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.spinner-border {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+/* Градиенты для иконок */
+.bg-gradient-coffee {
+    background: linear-gradient(135deg, var(--coffee-dark), var(--coffee-medium)) !important;
+}
+
+.bg-gradient-tea {
+    background: linear-gradient(135deg, var(--tea-dark-green), var(--tea-green)) !important;
+}
+
+.bg-gradient-brown {
+    background: linear-gradient(135deg, var(--coffee-medium), var(--chocolate)) !important;
+}
+
+/* Текстовые градиенты */
+.text-gradient-coffee {
+    background: linear-gradient(135deg, var(--coffee-dark), var(--coffee-medium));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Анимации появления */
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Специфичные стили для личного кабинета */
+.profile-section {
+    background: linear-gradient(135deg, rgba(255, 248, 225, 0.3), rgba(245, 222, 179, 0.1));
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Иконки в личном кабинете */
+.fa-coffee, .fa-tea {
+    color: var(--coffee-medium);
+}
+
+/* Адаптивность */
+@media (max-width: 576px) {
+    .profile-section {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+}
+
+/* Эффекты ховера для карточек */
+.card-hover-effect {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+    .card-hover-effect:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 15px 35px rgba(139, 69, 19, 0.15);
+    }

@@ -1,0 +1,213 @@
+﻿@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Личный кабинет";
+}
+
+<div class="container py-5">
+    <!-- Hero секция личного кабинета -->
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-gradient-coffee mb-3">Личный кабинет</h1>
+        <p class="text-muted lead">Управляйте вашими данными, заказами и предпочтениями</p>
+    </div>
+
+    <div id="profile-host">
+        <!-- Анимированный прелоадер -->
+        <div class="text-center py-5">
+            <div class="spinner-border text-coffee mb-3" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Загрузка...</span>
+            </div>
+            <div class="text-muted fs-5">
+                <i class="fas fa-coffee me-2"></i>Загружаем ваш профиль...
+            </div>
+        </div>
+    </div>
+
+    <!-- Дополнительные секции которые всегда видны -->
+    <div class="row mt-5">
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-hover border-0 rounded-4 h-100">
+                <div class="card-body text-center p-4">
+                    <div class="bg-gradient-coffee rounded-circle p-4 d-inline-flex mb-3">
+                        <i class="fas fa-shipping-fast fa-2x text-white"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark-brown">Быстрая доставка</h5>
+                    <p class="text-muted">Свежие обжарки и элитные чаи прямо к вам домой</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-hover border-0 rounded-4 h-100">
+                <div class="card-body text-center p-4">
+                    <div class="bg-gradient-tea rounded-circle p-4 d-inline-flex mb-3">
+                        <i class="fas fa-award fa-2x text-white"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark-brown">Премиум качество</h5>
+                    <p class="text-muted">Только отборные сорта кофе и чая от проверенных поставщиков</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-hover border-0 rounded-4 h-100">
+                <div class="card-body text-center p-4">
+                    <div class="bg-gradient-brown rounded-circle p-4 d-inline-flex mb-3">
+                        <i class="fas fa-headset fa-2x text-white"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark-brown">Поддержка 24/7</h5>
+                    <p class="text-muted">Наши бариста всегда помогут с выбором и ответят на вопросы</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        async function loadProfile() {
+            const host = document.getElementById('profile-host');
+
+            try {
+                // Показываем анимацию загрузки
+                host.innerHTML = `
+                    <div class="text-center py-5">
+                        <div class="spinner-border text-coffee mb-3" style="width: 3rem; height: 3rem;" role="status">
+                            <span class="visually-hidden">Загрузка...</span>
+                        </div>
+                        <div class="text-muted fs-5">
+                            <i class="fas fa-coffee me-2"></i>Загружаем ваш профиль...
+                        </div>
+                    </div>
+                `;
+
+                const resp = await fetch('/account/profile-partial', {
+                    credentials: 'same-origin',
+                    headers: {
+                        'Accept': 'text/html',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                });
+
+                if (resp.ok) {
+                    const html = await resp.text();
+                    host.innerHTML = html;
+
+                    // Добавляем анимацию появления
+                    setTimeout(() => {
+                        host.style.opacity = '0';
+                        host.style.transform = 'translateY(20px)';
+                        host.style.transition = 'all 0.5s ease';
+
+                        setTimeout(() => {
+                            host.style.opacity = '1';
+                            host.style.transform = 'translateY(0)';
+                        }, 50);
+                    }, 100);
+                } else {
+                    throw new Error('Ошибка загрузки');
+                }
+            } catch (error) {
+                console.error('Ошибка загрузки профиля:', error);
+                host.innerHTML = `
+                    <div class="alert alert-danger rounded-4 border-0 text-center">
+                        <div class="py-4">
+                            <i class="fas fa-exclamation-triangle fa-2x mb-3 text-coffee"></i>
+                            <h5 class="fw-bold text-dark-brown">Ошибка загрузки</h5>
+                            <p class="text-muted mb-3">Не удалось загрузить данные профиля</p>
+                            <button class="btn btn-coffee rounded-pill px-4" onclick="loadProfile()">
+                                <i class="fas fa-redo me-2"></i>Попробовать снова
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Задержка для демонстрации анимации (можно убрать)
+            setTimeout(loadProfile, 500);
+
+            // Обновляем заголовок страницы
+            document.title = "Личный кабинет | Coffee & Tea";
+        });
+
+        // Функция для обновления профиля
+        window.refreshProfile = function() {
+            loadProfile();
+        }
+                setInterval(() => {
+            if (document.visibilityState === 'visible') {
+                loadProfile();
+            }
+        }, 30000);
+
+        // Обработка изменения видимости страницы
+        document.addEventListener('visibilitychange', function() {
+            if (document.visibilityState === 'visible') {
+                loadProfile();
+            }
+        });
+    </script>
+
+    <style>
+        /* Специфичные стили для личного кабинета */
+        #profile-host {
+            min-height: 400px;
+            transition: all 0.5s ease;
+        }
+
+        .bg-gradient-tea {
+            background: linear-gradient(135deg, var(--tea-dark-green), var(--tea-green)) !important;
+        }
+
+        .bg-gradient-brown {
+            background: linear-gradient(135deg, var(--coffee-medium), var(--chocolate)) !important;
+        }
+
+        .spinner-border.text-coffee {
+            color: var(--coffee-medium) !important;
+            border-width: 3px;
+        }
+
+        /* Анимация карточек */
+        .card {
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.15) !important;
+        }
+
+        /* Адаптивность */
+        @@media (max-width: 768px) {
+            .display-4 {
+                font-size: 2.5rem;
+            }
+
+            .card-body {
+                padding: 2rem !important;
+            }
+        }
+
+        /* Кастомный скроллбар */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--cream);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--coffee-light);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--coffee-medium);
+        }
+    </style>
+}

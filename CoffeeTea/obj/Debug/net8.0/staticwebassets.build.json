@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "Hash": "lcYYFtju4ljy28z+BThQuyUzr7SEQWQlOv3nIncEFxM=",
+  "Source": "CoffeeTea",
+  "BasePath": "_content/CoffeeTea",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\ApiCoffeeTea.csproj",
+      "Version": 2,
+      "Source": "ApiCoffeeTea",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CoffeeTea\\wwwroot",
+      "Source": "CoffeeTea",
+      "ContentRoot": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\wwwroot\\",
+      "BasePath": "_content/CoffeeTea",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\wwwroot\\css\\site.css",
+      "SourceId": "CoffeeTea",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\wwwroot\\",
+      "BasePath": "_content/CoffeeTea",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7mhc8i2jfj",
+      "Integrity": "L1Sdjf9shm96cssup1ehYCZnVkyxr9E56FJstDDnupc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/site.7mhc8i2jfj.css",
+      "AssetFile": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18652"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L1Sdjf9shm96cssup1ehYCZnVkyxr9E56FJstDDnupc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 07 Nov 2025 18:35:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7mhc8i2jfj"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-L1Sdjf9shm96cssup1ehYCZnVkyxr9E56FJstDDnupc="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\CoffeeTea\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18652"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"L1Sdjf9shm96cssup1ehYCZnVkyxr9E56FJstDDnupc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 07 Nov 2025 18:35:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-L1Sdjf9shm96cssup1ehYCZnVkyxr9E56FJstDDnupc="
+        }
+      ]
+    }
+  ]
+}

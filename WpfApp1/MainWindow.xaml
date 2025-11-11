@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Лаборатнорная работа №3 УТС - 21 Новикова Дарья" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="637*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="nazhv" HorizontalAlignment="Left" Margin="40,28,0,0" Text="Преобразователь температуры" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="247" FontSize="14"/>
+        <TextBlock x:Name="tempnaz" HorizontalAlignment="Left" Margin="30,106,0,0" Text="Температура" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock x:Name="elinizizm" HorizontalAlignment="Left" Margin="42,103,0,0" Text="Единица изм." TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" FontSize="14"/>
+        <TextBlock x:Name="vpereshet" Margin="220,103,299,0" Text="Перессчитать в" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" FontSize="14"/>
+        <TextBox x:Name="tempvibr" HorizontalAlignment="Left" Margin="30,141,0,0" Text="1000" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Opacity="1" FontFamily="Baskerville Old Face" Height="18" TextChanged="tempvibr_TextChanged"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="851,150,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="edinizm" Grid.Column="1" HorizontalAlignment="Left" Margin="42,138,0,0" VerticalAlignment="Top" Width="86" SelectionChanged="edinizm_SelectionChanged" SelectedIndex="0">
+            <ComboBoxItem Content="°C"/>
+            <ComboBoxItem Content="°F"/>
+            <ComboBoxItem Content="°K"/>
+        </ComboBox>
+        <ComboBox x:Name="edinizm_v" Grid.Column="1" HorizontalAlignment="Left" Margin="237,138,0,0" VerticalAlignment="Top" Width="118" SelectedIndex="1">
+            <ComboBoxItem Content="°C"/>
+            <ComboBoxItem Content="°F"/>
+            <ComboBoxItem Content="°K"/>
+        </ComboBox>
+        <Button x:Name="knopka" Content="Пересчитать" Grid.Column="1" HorizontalAlignment="Left" Margin="441,138,0,0" VerticalAlignment="Top" Height="23" Width="109" Click="knopka_Click"/>
+        <Label Content="равняется:" Margin="51,267,596,138" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtResult" Width="Auto" Margin="30,301,636,107" IsReadOnly="True" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

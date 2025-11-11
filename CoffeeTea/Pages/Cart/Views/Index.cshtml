@@ -1,0 +1,100 @@
+﻿@using CoffeeTea.Pages.Cart.Models
+@model CartVm
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Корзина";
+}
+<div class="container py-5">
+    <h1 class="h3 fw-bold mb-4">Корзина</h1>
+
+    @if (TempData["CartError"] is string err && !string.IsNullOrWhiteSpace(err))
+    {
+        <div class="alert alert-danger">@err</div>
+    }
+
+    @if (!Model.Items.Any())
+    {
+        <div class="card border-0 bg-light rounded-4 p-5 text-center">
+            <p class="lead mb-4">Ваша корзина пуста</p>
+            <a class="btn btn-primary rounded-pill px-4" href="/catalog">
+                <i class="fas fa-store me-2"></i> Перейти в каталог
+            </a>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Товар</th>
+                        <th>Цена</th>
+                        <th style="width:160px;">Кол-во</th>
+                        <th>Сумма</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var i in Model.Items)
+                    {
+                        <tr>
+                            <td style="width:80px;">
+                                <img src="@(i.ImageUrl ?? "/img/placeholder.png")" class="img-fluid rounded" style="max-width:70px;" />
+                            </td>
+                            <td>@i.Name</td>
+                            <td>@i.Price.ToString("0.##")</td>
+                            <td>
+                                <form method="post" action="/cart/update" class="d-inline">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="id" value="@i.Id" />
+                                    <input type="number"
+                                           name="qty"
+                                           value="@i.Qty"
+                                           min="0"
+                                           class="form-control form-control-sm"
+                                           style="width:120px"
+                                           onchange="this.form.submit()" />
+                                </form>
+
+                            </td>
+                            <td>@(i.Subtotal.ToString("0.##"))</td>
+                            <td class="text-end">
+                                <form method="post" action="/cart/remove" class="d-inline">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="id" value="@i.Id" />
+                                    <button class="btn btn-sm btn-outline-danger" type="submit">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="4" class="text-end">Итого:</th>
+                        <th>@Model.Total.ToString("0.##")</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <form method="post" action="/cart/clear">
+                @Html.AntiForgeryToken()
+                <button class="btn btn-outline-secondary" type="submit">
+                    Очистить корзину
+                </button>
+            </form>
+
+            <form method="post" action="/cart/checkout">
+                @Html.AntiForgeryToken()
+                <a href="/cart/checkout" class="btn btn-primary">Оформить заказ</a>
+
+            </form>
+        </div>
+    }
+</div>

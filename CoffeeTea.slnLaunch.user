@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Новый профиль",
+    "Projects": [
+      {
+        "Path": "CoffeeTea\\CoffeeTea.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ApiCoffeeTea\\ApiCoffeeTea.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -1,0 +1,51 @@
+﻿@model CoffeeTea.Pages.Consultant.Models.PagedResult<
+           CoffeeTea.Pages.Consultant.Models.ArticleListItemVm>
+
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Статьи";
+    var items = Model.Items ?? new List<
+        CoffeeTea.Pages.Consultant.Models.ArticleListItemVm>();
+
+}
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h3 fw-bold"><i class="fas fa-newspaper me-2"></i> Статьи</h1>
+        <a href="/consultant/articles/edit" class="btn btn-success rounded-pill">
+            <i class="fas fa-plus me-2"></i> Новая статья
+        </a>
+    </div>
+
+    
+
+    <div class="table-responsive">
+        <table class="table align-middle">
+            <thead>
+                <tr><th>Заголовок</th><th>Категория</th><th>Публ.</th><th>Когда</th><th class="text-end">Действия</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var a in items)
+                {
+                    <tr>
+                        <td class="fw-semibold">@a.Title</td>
+                        <td>@a.Category</td>
+                        <td>@(a.IsPublished ? "Да" : "Нет")</td>
+                        <td>@(a.PublishedAt?.ToLocalTime().ToString("g") ?? "-")</td>
+                        <td class="text-end">
+                            <a class="btn btn-sm btn-outline-primary" href="/consultant/articles/edit/@a.Id">
+                                <i class="fas fa-edit me-1"></i> Ред.
+                            </a>
+                            <form method="post" action="/consultant/articles/delete" class="d-inline">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="id" value="@a.Id" />
+                                <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Удалить статью?')">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

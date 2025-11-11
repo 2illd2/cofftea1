@@ -1,0 +1,109 @@
+﻿@model CoffeeTea.Pages.Account.Models.LoginVm
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Войти";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+            <div class="card shadow-hover border-0 rounded-4">
+                <div class="card-body p-5">
+                    <div class="text-center mb-5">
+                        <h2 class="h1 fw-bold text-gradient-coffee mb-3">С возвращением!</h2>
+                        <p class="text-muted">Войдите в свой аккаунт чтобы продолжить</p>
+                    </div>
+
+                    <!-- ⬇️ ВАЖНО: укажи явно, куда постим -->
+                    <form action="/login" method="post" class="needs-validation" novalidate>
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="returnUrl" value="@ViewData["ReturnUrl"]" />
+
+                        @* РЕАЛЬНЫЙ вывод всех ошибок ModelState, без Tag Helpers *@
+                        @if (ViewData.ModelState is { ErrorCount: > 0 })
+                        {
+                            <div class="alert alert-danger mb-3">
+                                <ul class="mb-0">
+                                    @foreach (var kv in ViewData.ModelState)
+                                    {
+                                        foreach (var err in kv.Value.Errors)
+                                        {
+                                            <li>@err.ErrorMessage</li>
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                        }
+
+                        <!-- Email -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold text-dark-brown">
+                                <i class="fas fa-envelope me-2"></i>Email *
+                            </label>
+                            <input name="Email" class="form-control rounded-3 border-coffee"
+                                   autocomplete="username" placeholder="your@email.com" required />
+                        </div>
+
+                        <!-- Пароль -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold text-dark-brown">
+                                <i class="fas fa-lock me-2"></i>Пароль *
+                            </label>
+                            <div class="input-group">
+                                <input name="Password" type="password" class="form-control rounded-3 border-coffee"
+                                       autocomplete="current-password" placeholder="Введите ваш пароль" id="passwordInput" required />
+                                <button type="button" class="btn btn-outline-coffee border-coffee" onclick="togglePassword()">
+                                    <i class="fas fa-eye" id="passwordIcon"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Запомнить меня -->
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input name="RememberMe" class="form-check-input" type="checkbox" value="true" />
+                                <input type="hidden" name="RememberMe" value="false" />
+                                <label class="form-check-label text-dark-brown">
+                                    Запомнить меня
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-coffee btn-lg rounded-pill px-5 py-3 fw-semibold w-100">
+                                <i class="fas fa-sign-in-alt me-2"></i>Войти
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Если хочешь клиентскую валидацию tag-helpers (asp-validation-*),
+         подключи jQuery + jQuery Validate + jQuery Validate Unobtrusive ИЛИ _ValidationScriptsPartial -->
+    @* @await Html.PartialAsync("_ValidationScriptsPartial") *@
+
+    <script>
+        function togglePassword() {
+            const input = document.getElementById('passwordInput');
+            const icon = document.getElementById('passwordIcon');
+            if (input.type === 'password') { input.type = 'text'; icon.className = 'fas fa-eye-slash'; }
+            else { input.type = 'password'; icon.className = 'fas fa-eye'; }
+        }
+
+        // твоя bootstrap-валидация оставляем
+        document.addEventListener('DOMContentLoaded', function () {
+            const forms = document.querySelectorAll('.needs-validation');
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) { event.preventDefault(); event.stopPropagation(); }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        });
+    </script>
+}

@@ -1,0 +1,44 @@
+﻿@model CoffeeTea.Pages.Articles.Models.ArticlePublicVm
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="container py-5">
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/" class="text-coffee">Главная</a></li>
+            <li class="breadcrumb-item"><a href="/articles" class="text-coffee">Статьи</a></li>
+            <li class="breadcrumb-item active text-dark-brown">@Model.Title</li>
+        </ol>
+    </nav>
+
+    <article class="card border-0 shadow-sm rounded-4 p-4">
+        @if (!string.IsNullOrWhiteSpace(Model.CoverImageUrl))
+        {
+            <img src="@Model.CoverImageUrl" class="w-100 rounded-4 mb-4" alt="@Model.Title"
+                 style="max-height: 400px; object-fit: cover;" />
+        }
+
+        <h1 class="fw-bold text-dark-brown mb-3">@Model.Title</h1>
+
+        <div class="text-muted mb-3">
+            <i class="far fa-calendar-alt me-1"></i>
+            @(Model.PublishedAt?.ToLocalTime().ToString("d MMMM yyyy"))
+            @if (!string.IsNullOrEmpty(Model.Category))
+            {
+                <span class="ms-3 badge bg-light text-dark">@Model.Category</span>
+            }
+        </div>
+
+        <div class="text-muted fs-6 lh-lg">
+            @Html.Raw(Model.Content)
+        </div>
+    </article>
+
+    <div class="text-center mt-4">
+        <a href="/articles" class="btn btn-outline-coffee rounded-pill px-4">
+            <i class="fas fa-arrow-left me-2"></i> Назад к статьям
+        </a>
+    </div>
+</div>

@@ -1,0 +1,154 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model CoffeeTea.Pages.Account.Models.RegisterVm
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Регистрация";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-hover border-0 rounded-4">
+                <div class="card-body p-5">
+                    <!-- Заголовок -->
+                    <div class="text-center mb-5">
+                        <h2 class="h1 fw-bold text-gradient-coffee mb-3">Добро пожаловать!</h2>
+                        <p class="text-muted">Создайте аккаунт для доступа ко всем возможностям</p>
+                    </div>
+
+                    <form asp-controller="Account"
+                          asp-action="Register"
+                          method="post"
+                          class="needs-validation"
+                          novalidate>
+                        @Html.AntiForgeryToken()
+
+                        @if (!ViewData.ModelState.IsValid)
+                        {
+                            <div class="alert alert-danger">
+                                <ul class="mb-0">
+                                    @foreach (var kv in ViewData.ModelState)
+                                    {
+                                        foreach (var err in kv.Value.Errors)
+                                        {
+                                            <li>@err.ErrorMessage</li>
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                        }
+
+                        <div class="row g-4">
+                            <!-- Имя -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-dark-brown">
+                                    <i class="fas fa-user me-2"></i>Имя *
+                                </label>
+                                <input asp-for="FirstName" class="form-control rounded-3 border-coffee" placeholder="Введите ваше имя" />
+                                <span asp-validation-for="FirstName" class="text-danger small mt-1"></span>
+                            </div>
+
+                            <!-- Фамилия -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-dark-brown">
+                                    <i class="fas fa-users me-2"></i>Фамилия *
+                                </label>
+                                <input asp-for="LastName" class="form-control rounded-3 border-coffee" placeholder="Введите вашу фамилию" />
+                                <span asp-validation-for="LastName" class="text-danger small mt-1"></span>
+                            </div>
+
+                            <!-- Отчество -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-dark-brown">
+                                    <i class="fas fa-user-circle me-2"></i>Отчество
+                                </label>
+                                <input asp-for="MiddleName" class="form-control rounded-3 border-coffee" placeholder="Введите ваше отчество" />
+                            </div>
+
+                            <!-- Телефон -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-dark-brown">
+                                    <i class="fas fa-phone me-2"></i>Телефон
+                                </label>
+                                <input asp-for="Phone" class="form-control rounded-3 border-coffee" placeholder="+7 (999) 999-99-99" />
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-dark-brown">
+                                    <i class="fas fa-envelope me-2"></i>Email *
+                                </label>
+                                <input asp-for="Email" class="form-control rounded-3 border-coffee" placeholder="your@email.com" />
+                                <span asp-validation-for="Email" class="text-danger small mt-1"></span>
+                            </div>
+
+                            <!-- Пароль -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-dark-brown">
+                                    <i class="fas fa-lock me-2"></i>Пароль *
+                                </label>
+                                <div class="input-group">
+                                    <input asp-for="Password" type="password" class="form-control rounded-3 border-coffee" placeholder="Создайте пароль" id="passwordInput" />
+                                    <button type="button" class="btn btn-outline-coffee border-coffee" onclick="togglePassword()">
+                                        <i class="fas fa-eye" id="passwordIcon"></i>
+                                    </button>
+                                </div>
+                                <span asp-validation-for="Password" class="text-danger small mt-1"></span>
+                                <div class="form-text">Минимум 6 символов</div>
+                            </div>
+                        </div>
+
+                        <!-- Кнопка регистрации -->
+                        <div class="text-center mt-5">
+                            <button type="submit" class="btn btn-coffee btn-lg rounded-pill px-5 py-3 fw-semibold">
+                                <i class="fas fa-user-plus me-2"></i>Создать аккаунт
+                            </button>
+                        </div>
+
+                        <!-- Ссылка на вход -->
+                        <div class="text-center mt-4">
+                            <p class="text-muted">
+                                Уже есть аккаунт?
+                                <a href="/login" class="text-coffee fw-semibold text-decoration-none">
+                                    <i class="fas fa-sign-in-alt me-1"></i>Войти
+                                </a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('passwordInput');
+            const passwordIcon = document.getElementById('passwordIcon');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordIcon.className = 'fas fa-eye-slash';
+            } else {
+                passwordInput.type = 'password';
+                passwordIcon.className = 'fas fa-eye';
+            }
+        }
+
+        // Валидация формы
+        document.addEventListener('DOMContentLoaded', function () {
+            const forms = document.querySelectorAll('.needs-validation');
+
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        });
+    </script>
+}

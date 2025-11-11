@@ -1,0 +1,96 @@
+﻿@model CoffeeTea.Pages.Consultant.Models.ArticleEditVm
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Редактирование статьи";
+    var categories = (IEnumerable<CoffeeTea.Pages.Consultant.Models.CategoryItemVm>)(ViewBag.Categories ?? Enumerable.Empty<CoffeeTea.Pages.Consultant.Models.CategoryItemVm>());
+}
+
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h3 fw-bold"><i class="fas fa-pen-nib me-2"></i> @ViewData["Title"]</h1>
+        <a class="btn btn-outline-secondary rounded-pill" href="/consultant/articles">Назад к списку</a>
+    </div>
+
+    <form method="post" action="/consultant/articles/save">
+        @if (Model?.Id > 0)
+        {
+            <input type="hidden" name="id" value="@Model.Id" />
+        }
+
+        @Html.AntiForgeryToken()
+
+        <div class="row g-4">
+            <!-- Левая колонка содержание -->
+            <div class="col-lg-8">
+                <div class="card border-0 rounded-4 shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label class="form-label">Заголовок</label>
+                            <input name="title" class="form-control" value="@Model.Title" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Slug (URL)</label>
+                            <input name="slug" class="form-control" value="@Model.Slug" />
+                            <div class="form-text">Если пусто — сгенерируется автоматически.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Краткое описание</label>
+                            <textarea name="summary" class="form-control" rows="3">@Model.Summary</textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Содержимое</label>
+                            <textarea name="content" class="form-control" rows="14">@Model.Content</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Правая колонка: параметры/действия -->
+            <div class="col-lg-4">
+                <div class="card border-0 rounded-4 shadow-sm position-sticky" style="top: 90px;">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label class="form-label">Категория</label>
+                            <select name="categoryId" class="form-select">
+                                <option value="">— Без категории —</option>
+                                @foreach (var c in categories)
+                                {
+                                    <option value="@c.Id" selected="@(Model.CategoryId == c.Id)">@c.Name</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Cover URL</label>
+                            <input name="coverImageUrl" class="form-control" value="@Model.CoverImageUrl" />
+                        </div>
+
+                        <div class="form-check form-switch mb-4">
+                            <!-- <input type="hidden" name="isPublished" value="false" /> -->
+                            <input class="form-check-input"
+                                   type="checkbox"
+                                   id="isPublished"
+                                   name="isPublished"
+                                   value="true"
+                            @(Model.IsPublished ? "checked" : null) />
+                            <label class="form-check-label" for="isPublished">Опубликовать</label>
+                        </div>
+
+
+
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-success rounded-pill">
+                                <i class="fas fa-save me-2"></i> Сохранить
+                            </button>
+                            <a class="btn btn-outline-secondary rounded-pill" href="/consultant/articles">Отмена</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

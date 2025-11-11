@@ -1,0 +1,66 @@
+﻿@model List<CoffeeTea.Pages.Admin.Category.Controllers.AdminArticleCategoryController.Vm>
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Категории статей";
+}
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h3 fw-bold"><i class="fas fa-layer-group me-2"></i> Категории статей</h1>
+        <a class="btn btn-primary rounded-pill" href="/admin/article-categories/edit">
+            <i class="fas fa-plus me-2"></i> Новая категория
+        </a>
+    </div>
+
+    @if (TempData["Ok"] is string ok)
+    {
+        <div class="alert alert-success">@ok</div>
+    }
+    @if (TempData["Error"] is string err)
+    {
+        <div class="alert alert-danger">@err</div>
+    }
+
+    <div class="table-responsive">
+        <table class="table align-middle">
+            <thead>
+                <tr><th>#</th><th>Название</th><th>Статус</th><th class="text-end">Действия</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var c in Model)
+                {
+                    <tr class="@(c.Deleted ? "table-warning" : "")">
+                        <td>@c.Id</td>
+                        <td class="fw-semibold">@c.Name</td>
+                        <td>@(c.Deleted ? "Удалена" : "Активна")</td>
+                        <td class="text-end">
+                            <a class="btn btn-sm btn-outline-primary" href="/admin/article-categories/edit/@c.Id">
+                                <i class="fas fa-edit me-1"></i> Ред.
+                            </a>
+
+                            @if (!c.Deleted)
+                            {
+                                <form method="post" action="/admin/article-categories/delete" class="d-inline">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="id" value="@c.Id" />
+                                    <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Удалить категорию?')">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
+                            }
+                            else
+                            {
+                                <form method="post" action="/admin/article-categories/restore" class="d-inline">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="id" value="@c.Id" />
+                                    <button class="btn btn-sm btn-outline-success">
+                                        <i class="fas fa-undo"></i>
+                                    </button>
+                                </form>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

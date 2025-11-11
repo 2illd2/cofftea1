@@ -1,0 +1,54 @@
+﻿@model IEnumerable<dynamic>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Товары (админ)";
+}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="mb-0">Товары</h2>
+        <a class="btn btn-primary" href="/admin/products/create"><i class="fas fa-plus me-1"></i>Добавить</a>
+    </div>
+
+    <table class="table table-hover align-middle">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Название</th>
+                <th>SKU</th>
+                <th>Цена</th>
+                <th>Наличие</th>
+                <th>Статус</th>
+                <th class="text-end">Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model)
+            {
+                <tr class="@(p.Deleted ? "table-warning" : "")">
+                    <td>@p.Id</td>
+                    <td>@p.Name</td>
+                    <td>@p.Sku</td>
+                    <td>@((decimal)p.Price).ToString("C")</td>
+                    <td>@p.Quantity</td>
+                    <td>@(p.Deleted ? "Удалён" : "Активен")</td>
+                    <td class="text-end">
+                        <a class="btn btn-sm btn-outline-secondary" href="/admin/products/@p.Id/edit">Редактировать</a>
+                        @if (!p.Deleted)
+                        {
+                            <form class="d-inline" method="post" action="/admin/products/@p.Id/delete">
+                                <button class="btn btn-sm btn-outline-danger" type="submit" onclick="return confirm('Удалить?')">Удалить</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <form class="d-inline" method="post" action="/admin/products/@p.Id/restore">
+                                <button class="btn btn-sm btn-outline-success" type="submit">Восстановить</button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

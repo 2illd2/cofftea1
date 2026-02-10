@@ -1,0 +1,263 @@
+@model CoffeeTea.Pages.Admin.Audit.Models.PagedAuditResult
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Журнал аудита";
+    var tableName = ViewBag.TableName as string;
+}
+
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h3 fw-bold"><i class="fas fa-clipboard-list me-2"></i> Журнал аудита</h1>
+        <div>
+            <a href="/admin/audit/top-products" class="btn btn-outline-info rounded-pill me-2">
+                <i class="fas fa-chart-line me-1"></i> Топ товары
+            </a>
+        </div>
+    </div>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewBag.Error
+        </div>
+    }
+
+    <!-- Фильтр по таблице -->
+    <div class="card border-0 rounded-4 shadow-sm mb-4">
+        <div class="card-body">
+            <form method="get" action="/admin/audit" class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Фильтр по таблице:</label>
+                    <select name="tableName" class="form-select">
+                        <option value="">Все таблицы</option>
+                        <option value="orders" @(tableName == "orders" ? "selected" : "")>Заказы (orders)</option>
+                        <option value="products" @(tableName == "products" ? "selected" : "")>Товары (products)</option>
+                        <option value="users" @(tableName == "users" ? "selected" : "")>Пользователи (users)</option>
+                        <option value="cart" @(tableName == "cart" ? "selected" : "")>Корзина (cart)</option>
+                    </select>
+                </div>
+                <div class="col-md-6 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary rounded-pill">
+                        <i class="fas fa-filter me-1"></i> Применить фильтр
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Таблица логов -->
+    <div class="card border-0 rounded-4 shadow-sm">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Таблица</th>
+                            <th>Операция</th>
+                            <th>ID записи</th>
+                            <th>Пользователь</th>
+                            <th>Дата/Время</th>
+                            <th>Детали</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Logs.Count == 0)
+                        {
+                            <tr>
+                                <td colspan="7" class="text-center text-muted py-4">
+                                    Записей не найдено
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            @foreach (var log in Model.Logs)
+                            {
+                                <tr>
+                                    <td>@log.Id</td>
+                                    <td>
+                                        <span class="badge bg-secondary">@log.TableName</span>
+                                    </td>
+                                    <td>
+                                        @if (log.Operation == "INSERT")
+                                        {
+                                            <span class="badge bg-success">INSERT</span>
+                                        }
+                                        else if (log.Operation == "UPDATE")
+                                        {
+                                            <span class="badge bg-warning text-dark">UPDATE</span>
+                                        }
+                                        else if (log.Operation == "DELETE")
+                                        {
+                                            <span class="badge bg-danger">DELETE</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-secondary">@log.Operation</span>
+                                        }
+                                    </td>
+                                    <td>@log.RowId</td>
+                                    <td>
+                                        @if (!string.IsNullOrEmpty(log.UserName))
+                                        {
+                                            <span>@log.UserName</span>
+                                            @if (log.UserId.HasValue)
+                                            {
+                                                <br />
+                                                <small class="text-muted">(ID: @log.UserId)</small>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">—</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <small>@log.ChangedAt.ToString("dd.MM.yyyy HH:mm:ss")</small>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-info" onclick="showDetails(@log.Id)">
+                                            <i class="fas fa-info-circle"></i> Подробно
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Пагинация -->
+            @if (Model.Total > Model.PageSize)
+            {
+                <nav aria-label="Pagination" class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        @{
+                            var totalPages = (int)Math.Ceiling((double)Model.Total / Model.PageSize);
+                            var currentPage = Model.Page;
+                        }
+
+                        @if (currentPage > 1)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" href="?page=@(currentPage - 1)@(string.IsNullOrEmpty(tableName) ? "" : "&tableName=" + tableName)">Назад</a>
+                            </li>
+                        }
+
+                        @for (int i = Math.Max(1, currentPage - 2); i <= Math.Min(totalPages, currentPage + 2); i++)
+                        {
+                            <li class="page-item @(i == currentPage ? "active" : "")">
+                                <a class="page-link" href="?page=@i@(string.IsNullOrEmpty(tableName) ? "" : "&tableName=" + tableName)">@i</a>
+                            </li>
+                        }
+
+                        @if (currentPage < totalPages)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" href="?page=@(currentPage + 1)@(string.IsNullOrEmpty(tableName) ? "" : "&tableName=" + tableName)">Вперед</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            }
+
+            <div class="text-center text-muted mt-3">
+                <small>Показано записей: @Model.Logs.Count из @Model.Total</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальные окна для деталей -->
+@foreach (var log in Model.Logs)
+{
+    <div class="modal fade" id="detailsModal@(log.Id)" tabindex="-1" aria-labelledby="detailsModalLabel@(log.Id)" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="detailsModalLabel@(log.Id)">
+                        <i class="fas fa-info-circle me-2"></i>Детали изменения #@log.Id
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <h6 class="text-muted mb-2">Информация об операции:</h6>
+                        <div class="row g-2">
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded">
+                                    <small class="text-muted d-block">Таблица</small>
+                                    <strong>@log.TableName</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded">
+                                    <small class="text-muted d-block">Операция</small>
+                                    <strong>@log.Operation</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded">
+                                    <small class="text-muted d-block">ID записи</small>
+                                    <strong>@log.RowId</strong>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded">
+                                    <small class="text-muted d-block">Дата/Время</small>
+                                    <strong>@log.ChangedAt.ToString("dd.MM.yyyy HH:mm:ss")</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(log.OldValues))
+                    {
+                        <div class="mb-3">
+                            <h6 class="text-danger mb-2">
+                                <i class="fas fa-minus-circle me-1"></i>Старые значения:
+                            </h6>
+                            <pre class="bg-light p-3 rounded border" style="max-height: 300px; overflow-y: auto; font-size: 0.875rem;">@log.OldValues</pre>
+                        </div>
+                    }
+
+                    @if (!string.IsNullOrEmpty(log.NewValues))
+                    {
+                        <div class="mb-3">
+                            <h6 class="text-success mb-2">
+                                <i class="fas fa-plus-circle me-1"></i>Новые значения:
+                            </h6>
+                            <pre class="bg-light p-3 rounded border" style="max-height: 300px; overflow-y: auto; font-size: 0.875rem;">@log.NewValues</pre>
+                        </div>
+                    }
+
+                    @if (!string.IsNullOrEmpty(log.UserName))
+                    {
+                        <div class="alert alert-info mb-0">
+                            <i class="fas fa-user me-2"></i>
+                            <strong>Изменил:</strong> @log.UserName
+                            @if (log.UserId.HasValue)
+                            {
+                                <span class="text-muted">(ID: @log.UserId)</span>
+                            }
+                        </div>
+                    }
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-1"></i>Закрыть
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+    function showDetails(logId) {
+        const modalId = 'detailsModal' + logId;
+        const modal = new bootstrap.Modal(document.getElementById(modalId));
+        modal.show();
+    }
+</script>

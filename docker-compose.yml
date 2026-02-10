@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: coffeetea-db
+    environment:
+      POSTGRES_DB: coffeetea_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      # Optional: Add initialization scripts here if needed
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

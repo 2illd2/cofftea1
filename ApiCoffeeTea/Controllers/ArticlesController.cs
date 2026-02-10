@@ -113,7 +113,7 @@ public class ArticlesController : ControllerBase
         if (!a.is_published && dto.IsPublished)
         {
             a.is_published = true;
-            a.published_at = DateTime.UtcNow;
+            a.published_at = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Utc);
         }
         else if (a.is_published && !dto.IsPublished)
         {

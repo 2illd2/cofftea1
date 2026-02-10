@@ -47,6 +47,8 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<user> users { get; set; }
 
+    public virtual DbSet<audit_log> audit_logs { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<address>(entity =>
@@ -427,6 +429,25 @@ public partial class AppDbContext : DbContext
                 .HasForeignKey(d => d.role_id)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("users_role_id_fkey");
+        });
+
+        modelBuilder.Entity<audit_log>(entity =>
+        {
+            entity.HasKey(e => e.id).HasName("audit_log_pkey");
+
+            entity.Property(e => e.id).UseIdentityAlwaysColumn();
+            entity.Property(e => e.table_name).HasMaxLength(100);
+            entity.Property(e => e.operation).HasMaxLength(10);
+            entity.Property(e => e.changed_at)
+                .HasDefaultValueSql("now()")
+                .HasColumnType("timestamp without time zone");
+            entity.Property(e => e.old_values).HasColumnType("jsonb");
+            entity.Property(e => e.new_values).HasColumnType("jsonb");
+
+            entity.HasOne(d => d.user).WithMany()
+                .HasForeignKey(d => d.user_id)
+                .OnDelete(DeleteBehavior.SetNull)
+                .HasConstraintName("audit_log_user_id_fkey");
         });
 
         OnModelCreatingPartial(modelBuilder);

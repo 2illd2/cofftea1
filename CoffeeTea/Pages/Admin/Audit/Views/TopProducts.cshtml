@@ -1,0 +1,97 @@
+@model List<CoffeeTea.Pages.Admin.Audit.Models.TopProductVm>
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Топ товары";
+}
+
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h3 fw-bold"><i class="fas fa-chart-line me-2"></i> Топ товары</h1>
+        <a href="/admin/audit" class="btn btn-outline-secondary rounded-pill">
+            <i class="fas fa-arrow-left me-1"></i> К журналу аудита
+        </a>
+    </div>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewBag.Error
+        </div>
+    }
+
+    <div class="card border-0 rounded-4 shadow-sm">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Название товара</th>
+                            <th class="text-end">Продано (шт.)</th>
+                            <th class="text-end">Выручка (₽)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Count == 0)
+                        {
+                            <tr>
+                                <td colspan="4" class="text-center text-muted py-4">
+                                    Данные не найдены
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            var index = 1;
+                            @foreach (var product in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @if (index == 1)
+                                        {
+                                            <span class="badge bg-warning text-dark fs-5">🥇 @index</span>
+                                        }
+                                        else if (index == 2)
+                                        {
+                                            <span class="badge bg-secondary fs-5">🥈 @index</span>
+                                        }
+                                        else if (index == 3)
+                                        {
+                                            <span class="badge bg-danger fs-5">🥉 @index</span>
+                                        }
+                                        else
+                                        {
+                                            <span>@index</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <strong>@product.ProductName</strong>
+                                        <br />
+                                        <small class="text-muted">ID: @product.ProductId</small>
+                                    </td>
+                                    <td class="text-end">
+                                        <span class="badge bg-info fs-6">@product.TotalSold</span>
+                                    </td>
+                                    <td class="text-end">
+                                        <span class="text-success fw-bold">@product.Revenue.ToString("N2") ₽</span>
+                                    </td>
+                                </tr>
+                                index++;
+                            }
+                        }
+                    </tbody>
+                    @if (Model.Count > 0)
+                    {
+                        <tfoot>
+                            <tr class="fw-bold">
+                                <td colspan="2" class="text-end">ИТОГО:</td>
+                                <td class="text-end">@Model.Sum(p => p.TotalSold)</td>
+                                <td class="text-end text-success">@Model.Sum(p => p.Revenue).ToString("N2") ₽</td>
+                            </tr>
+                        </tfoot>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

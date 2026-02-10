@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aq4oyt7ya14=",
+  "dgSpecHash": "V5sQ74zOC4s=",
   "success": true,
-  "projectFilePath": "C:\\Users\\konox\\source\\repos\\CoffeeTea\\ApiCoffeeTea\\ApiCoffeeTea.csproj",
+  "projectFilePath": "C:\\Users\\konox\\Downloads\\Telegram Desktop\\cofftea1 (2)\\cofftea1\\ApiCoffeeTea\\ApiCoffeeTea.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\konox\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\konox\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

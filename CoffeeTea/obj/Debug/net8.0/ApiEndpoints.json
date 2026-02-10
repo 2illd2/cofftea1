@@ -178,6 +178,162 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ApiCoffeeTea.Controllers.AdminAuditController",
+    "Method": "CleanOldCarts",
+    "RelativePath": "api/admin/audit/clean-old-carts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "daysOld",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiCoffeeTea.Controllers.AdminAuditController",
+    "Method": "GetAuditLogs",
+    "RelativePath": "api/admin/audit/logs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tableName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiCoffeeTea.Controllers.AdminAuditController",
+    "Method": "GetTopProducts",
+    "RelativePath": "api/admin/audit/top-products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "limit",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ApiCoffeeTea.DTO.TopProductDto, ApiCoffeeTea, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApiCoffeeTea.Controllers.AdminAuditController",
+    "Method": "GetUserStats",
+    "RelativePath": "api/admin/audit/user-stats/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ApiCoffeeTea.DTO.UserStatsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApiCoffeeTea.Controllers.AdminBackupController",
+    "Method": "CreateBackup",
+    "RelativePath": "api/admin/backup/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiCoffeeTea.Controllers.AdminBackupController",
+    "Method": "DeleteBackup",
+    "RelativePath": "api/admin/backup/delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "backupName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiCoffeeTea.Controllers.AdminBackupController",
+    "Method": "ListBackups",
+    "RelativePath": "api/admin/backup/list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ApiCoffeeTea.DTO.BackupDto, ApiCoffeeTea, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApiCoffeeTea.Controllers.AdminBackupController",
+    "Method": "RestoreBackup",
+    "RelativePath": "api/admin/backup/restore",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ApiCoffeeTea.Controllers.RestoreBackupRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ApiCoffeeTea.Controllers.AdminProductsController",
     "Method": "GetAll",
     "RelativePath": "api/admin/products",
@@ -817,6 +973,16 @@
     ]
   },
   {
+    "ContainingType": "ApiCoffeeTea.Controllers.OrderStatusController",
+    "Method": "GetAll",
+    "RelativePath": "api/order-statuses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ApiCoffeeTea.Controllers.OrderController",
     "Method": "GetAll",
     "RelativePath": "api/orders",
@@ -824,6 +990,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiCoffeeTea.Controllers.OrderController",
+    "Method": "GetById",
+    "RelativePath": "api/orders/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

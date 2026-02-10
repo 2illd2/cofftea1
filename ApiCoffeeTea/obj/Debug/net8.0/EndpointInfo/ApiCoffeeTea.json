@@ -302,6 +302,259 @@
         }
       }
     },
+    "/api/admin/audit/logs": {
+      "get": {
+        "tags": [
+          "AdminAudit"
+        ],
+        "parameters": [
+          {
+            "name": "tableName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/admin/audit/user-stats/{userId}": {
+      "get": {
+        "tags": [
+          "AdminAudit"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserStatsDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserStatsDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserStatsDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/audit/top-products": {
+      "get": {
+        "tags": [
+          "AdminAudit"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TopProductDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TopProductDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TopProductDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/audit/clean-old-carts": {
+      "post": {
+        "tags": [
+          "AdminAudit"
+        ],
+        "parameters": [
+          {
+            "name": "daysOld",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 30
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/admin/backup/create": {
+      "post": {
+        "tags": [
+          "AdminBackup"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/admin/backup/list": {
+      "get": {
+        "tags": [
+          "AdminBackup"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BackupDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BackupDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BackupDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/backup/restore": {
+      "post": {
+        "tags": [
+          "AdminBackup"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RestoreBackupRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RestoreBackupRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RestoreBackupRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/admin/backup/delete": {
+      "delete": {
+        "tags": [
+          "AdminBackup"
+        ],
+        "parameters": [
+          {
+            "name": "backupName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/admin/products": {
       "get": {
         "tags": [
@@ -1402,6 +1655,29 @@
         }
       }
     },
+    "/api/orders/{id}": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/orders/{id}/status/{statusId}": {
       "put": {
         "tags": [
@@ -1426,6 +1702,18 @@
               "format": "int32"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/order-statuses": {
+      "get": {
+        "tags": [
+          "OrderStatus"
         ],
         "responses": {
           "200": {
@@ -1849,6 +2137,21 @@
         },
         "additionalProperties": false
       },
+      "BackupDto": {
+        "type": "object",
+        "properties": {
+          "BackupName": {
+            "type": "string",
+            "nullable": true
+          },
+          "CreatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CartDto": {
         "type": "object",
         "properties": {
@@ -2249,6 +2552,16 @@
         },
         "additionalProperties": false
       },
+      "RestoreBackupRequest": {
+        "type": "object",
+        "properties": {
+          "BackupName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "SaveDto": {
         "type": "object",
         "properties": {
@@ -2269,6 +2582,28 @@
           "Text": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TopProductDto": {
+        "type": "object",
+        "properties": {
+          "ProductId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ProductName": {
+            "type": "string",
+            "nullable": true
+          },
+          "TotalSold": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "Revenue": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
@@ -2343,6 +2678,45 @@
           "Role": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserStatsDto": {
+        "type": "object",
+        "properties": {
+          "UserName": {
+            "type": "string",
+            "nullable": true
+          },
+          "TotalOrders": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "TotalSpent": {
+            "type": "number",
+            "format": "double"
+          },
+          "AvgOrderValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "ReviewsCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "LastOrderDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "CartItemsCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "RegistrationDate": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false

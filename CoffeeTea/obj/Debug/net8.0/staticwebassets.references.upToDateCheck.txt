@@ -103,3 +103,26 @@ C:\Users\konox\source\repos\CoffeeTea\ApiCoffeeTea\obj\Debug\net8.0\staticwebass
 C:\Users\konox\source\repos\CoffeeTea\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\konox\source\repos\CoffeeTea\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\konox\source\repos\CoffeeTea\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+E:\Programming\Freelance\asp\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+E:\Programming\Freelance\asp\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+E:\Programming\Freelance\asp\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+E:\Programming\Freelance\asp\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+E:\Programming\Freelance\asp\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+E:\Programming\Freelance\asp\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+E:\Programming\Freelance\asp\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+E:\Programming\Freelance\asp\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+E:\Programming\Freelance\asp\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+E:\Programming\Freelance\asp\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+E:\Programming\Freelance\asp\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+E:\Programming\Freelance\asp\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+E:\Programming\Freelance\asp\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+E:\Programming\Freelance\asp\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+E:\Programming\Freelance\asp\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\konox\Downloads\Telegram Desktop\cofftea1 (2)\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\konox\Downloads\Telegram Desktop\cofftea1 (2)\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\konox\Downloads\Telegram Desktop\cofftea1 (2)\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\konox\Downloads\Telegram Desktop\cofftea1 (2)\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\konox\Downloads\Telegram Desktop\cofftea1 (2)\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\konox\Downloads\Telegram Desktop\cofftea1 (2)\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\konox\Downloads\Telegram Desktop\cofftea1 (2)\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\konox\Downloads\Telegram Desktop\cofftea1 (2)\cofftea1\ApiCoffeeTea\obj\Debug\net8.0\staticwebassets.build.json

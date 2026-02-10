@@ -1,0 +1,147 @@
+@{
+    Layout = "~/Pages/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Админ-панель";
+}
+
+<div class="container py-5">
+    <div class="mb-5 text-center">
+        <h1 class="display-4 fw-bold"><i class="fas fa-shield-alt me-3"></i>Панель администратора</h1>
+        <p class="lead text-muted">Управление системой CoffeeTea</p>
+    </div>
+
+    <div class="row g-4">
+        <!-- Товары -->
+        <div class="col-md-6 col-lg-4">
+            <a href="/admin/products" class="text-decoration-none">
+                <div class="card border-0 rounded-4 shadow-sm h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-box-open fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Товары</h5>
+                        <p class="card-text text-muted">Управление каталогом товаров, добавление и редактирование</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Заказы -->
+        <div class="col-md-6 col-lg-4">
+            <a href="/admin/orders" class="text-decoration-none">
+                <div class="card border-0 rounded-4 shadow-sm h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-shopping-cart fa-3x text-success"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Заказы</h5>
+                        <p class="card-text text-muted">Просмотр и управление заказами клиентов</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Категории статей -->
+        <div class="col-md-6 col-lg-4">
+            <a href="/admin/article-categories" class="text-decoration-none">
+                <div class="card border-0 rounded-4 shadow-sm h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-folder fa-3x text-warning"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Категории статей</h5>
+                        <p class="card-text text-muted">Управление категориями статей и блогов</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Журнал аудита -->
+        <div class="col-md-6 col-lg-4">
+            <a href="/admin/audit" class="text-decoration-none">
+                <div class="card border-0 rounded-4 shadow-sm h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-clipboard-list fa-3x text-info"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Журнал аудита</h5>
+                        <p class="card-text text-muted">Просмотр логов изменений и статистики</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Резервное копирование -->
+        <div class="col-md-6 col-lg-4">
+            <a href="/admin/backup" class="text-decoration-none">
+                <div class="card border-0 rounded-4 shadow-sm h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-database fa-3x text-danger"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Резервное копирование</h5>
+                        <p class="card-text text-muted">Создание и восстановление бэкапов</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Настройки -->
+        <div class="col-md-6 col-lg-4">
+            <a href="/admin/settings" class="text-decoration-none">
+                <div class="card border-0 rounded-4 shadow-sm h-100 hover-lift">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-cog fa-3x text-secondary"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Настройки</h5>
+                        <p class="card-text text-muted">Конфигурация системы и параметры</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Быстрая статистика -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card border-0 rounded-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title mb-4"><i class="fas fa-chart-line me-2"></i>Быстрые ссылки</h5>
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <a href="/admin/audit/top-products" class="btn btn-outline-primary w-100 rounded-pill">
+                                <i class="fas fa-trophy me-2"></i>Топ товары
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="/admin/products/create" class="btn btn-outline-success w-100 rounded-pill">
+                                <i class="fas fa-plus me-2"></i>Добавить товар
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="/admin/backup/create" class="btn btn-outline-danger w-100 rounded-pill">
+                                <i class="fas fa-save me-2"></i>Создать бэкап
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="/" class="btn btn-outline-secondary w-100 rounded-pill">
+                                <i class="fas fa-home me-2"></i>На сайт
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+</style>

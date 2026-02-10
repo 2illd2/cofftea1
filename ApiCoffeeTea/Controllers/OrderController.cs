@@ -58,19 +58,71 @@ public class OrderController : ControllerBase
         return Ok(allOrders);
     }
 
+    // Получить детали заказа
+    [HttpGet("{id:int}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var uid = User.GetUserId();
+        var role = User.FindFirst("Role")?.Value;
+
+        var order = await _db.orders
+            .Include(o => o.status)
+            .Include(o => o.user)
+            .Include(o => o.address)
+            .Include(o => o.order_items)
+                .ThenInclude(oi => oi.product)
+            .Where(o => o.id == id && !o.deleted)
+            .FirstOrDefaultAsync();
+
+        if (order == null)
+            return NotFound();
+
+        // Обычные пользователи могут видеть только свои заказы
+        if (role == "user" && order.user_id != uid)
+            return Forbid();
+
+        var result = new
+        {
+            id = order.id,
+            total = order.total,
+            status = order.status.name,
+            statusId = order.status_id,
+            client = order.user.first_name + " " + order.user.last_name,
+            clientEmail = order.user.email,
+            address = $"{order.address.line1}, {order.address.city}, {order.address.postal_code}",
+            paymentStatus = order.payment_status,
+            createdAt = order.created_at,
+            items = order.order_items.Select(oi => new
+            {
+                productId = oi.product_id,
+                productName = oi.product.name,
+                qty = oi.qty,
+                unitPrice = oi.unit_price
+            }).ToList()
+        };
+
+        return Ok(result);
+    }
+
     // Изменить статус
     [HttpPut("{id:int}/status/{statusId:int}")]
-    [Authorize(Roles = "Admin,Consultant")]
+    [Authorize(Roles = "admin,consultant")]
     public async Task<IActionResult> ChangeStatus(int id, int statusId)
     {
         var order = await _db.orders
-    .Include(o => o.status)           
-    .FirstOrDefaultAsync(o => o.id == id);
+            .Include(o => o.status)
+            .FirstOrDefaultAsync(o => o.id == id);
+
+        if (order == null)
+            return NotFound();
 
         var st = await _db.order_statuses.FindAsync(statusId);
+        if (st == null)
+            return BadRequest("Неверный статус");
+
         order.status_id = statusId;
         await _db.SaveChangesAsync();
 
-        return Ok(new { order.id, NewStatus = st!.name });
+        return Ok(new { order.id, NewStatus = st.name });
     }
 }

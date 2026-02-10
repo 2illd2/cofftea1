@@ -154,6 +154,49 @@ namespace ApiCoffeeTea.Migrations
                     b.ToTable("article_categories");
                 });
 
+            modelBuilder.Entity("ApiCoffeeTea.Data.audit_log", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityAlwaysColumn(b.Property<int>("id"));
+
+                    b.Property<DateTime>("changed_at")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp without time zone")
+                        .HasDefaultValueSql("now()");
+
+                    b.Property<string>("new_values")
+                        .HasColumnType("jsonb");
+
+                    b.Property<string>("old_values")
+                        .HasColumnType("jsonb");
+
+                    b.Property<string>("operation")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("character varying(10)");
+
+                    b.Property<int>("row_id")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("table_name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<int?>("user_id")
+                        .HasColumnType("integer");
+
+                    b.HasKey("id")
+                        .HasName("audit_log_pkey");
+
+                    b.HasIndex("user_id");
+
+                    b.ToTable("audit_log");
+                });
+
             modelBuilder.Entity("ApiCoffeeTea.Data.cart", b =>
                 {
                     b.Property<int>("id")
@@ -825,6 +868,17 @@ namespace ApiCoffeeTea.Migrations
                         .HasConstraintName("articles_category_id_fkey");
 
                     b.Navigation("category");
+                });
+
+            modelBuilder.Entity("ApiCoffeeTea.Data.audit_log", b =>
+                {
+                    b.HasOne("ApiCoffeeTea.Data.user", "user")
+                        .WithMany()
+                        .HasForeignKey("user_id")
+                        .OnDelete(DeleteBehavior.SetNull)
+                        .HasConstraintName("audit_log_user_id_fkey");
+
+                    b.Navigation("user");
                 });
 
             modelBuilder.Entity("ApiCoffeeTea.Data.cart", b =>

@@ -1,169 +1,192 @@
-﻿
-using ApiCoffeeTea.Data;
-using ApiCoffeeTea.DTO;
+using CoffeeTea.Pages.Consultant.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Text.Json;
 
-namespace ApiCoffeeTea.Controllers;
+namespace CoffeeTea.Pages.Consultant.Controllers;
 
-[ApiController]
-[Route("api/articles")]
 [Authorize(Roles = "consultant,admin")]
-public class ArticlesController : ControllerBase
+public class ConsultantController : Controller
 {
-    private readonly AppDbContext _db;
-    public ArticlesController(AppDbContext db) => _db = db;
+    private readonly IHttpClientFactory _httpClientFactory;
 
-    // список (внутренний, можно видеть черновики)
-    [HttpGet]
-    public async Task<ActionResult<object>> List(
-        [FromQuery] string? q,
-        [FromQuery] bool onlyPublished = false,
-        [FromQuery] int page = 1,
-        [FromQuery] int pageSize = 20)
+    public ConsultantController(IHttpClientFactory httpClientFactory)
     {
-        var query = _db.articles
-            .Include(a => a.category)
-            .Where(a => !a.deleted);
+        _httpClientFactory = httpClientFactory;
+    }
 
-        if (onlyPublished) query = query.Where(a => a.is_published);
+    // GET: /consultant/articles
+    [Route("/consultant/articles")]
+    public async Task<IActionResult> Articles([FromQuery] string? q, [FromQuery] int page = 1)
+    {
+        var client = _httpClientFactory.CreateClient("CoffeeTeaApi");
+        var url = $"/api/articles?q={q}&page={page}&pageSize=20";
 
-        if (!string.IsNullOrWhiteSpace(q))
+        var response = await client.GetAsync(url);
+        if (!response.IsSuccessStatusCode)
         {
-            var term = q.ToLower();
-            query = query.Where(a => a.title.ToLower().Contains(term) ||
-                                     (a.summary != null && a.summary.ToLower().Contains(term)));
+            return View("~/Pages/Consultant/Views/Index.cshtml", new PagedResult<ArticleListItemVm>());
         }
 
-        var total = await query.CountAsync();
+        var json = await response.Content.ReadAsStringAsync();
+        var apiResult = JsonSerializer.Deserialize<JsonElement>(json);
 
-        var items = await query
-            .OrderByDescending(a => a.published_at ?? DateTime.MinValue)
-            .ThenByDescending(a => a.id)
-            .Skip((page - 1) * pageSize)
-            .Take(pageSize)
-            .Select(a => new ArticleListItemDto(
-                a.id,
-                a.title,
-                a.category != null ? a.category.name : "Без категории",
-                a.is_published,
-                a.published_at))
-            .ToListAsync();
+        var items = apiResult.GetProperty("items").Deserialize<List<ArticleListItemVm>>() ?? new();
+        var total = apiResult.GetProperty("total").GetInt32();
 
-        return Ok(new { items, total, page, pageSize });
-    }
-
-    // получить одну для формы
-    [HttpGet("{id:int}")]
-    public async Task<ActionResult<object>> Get(int id)
-    {
-        var a = await _db.articles.AsNoTracking()
-            .FirstOrDefaultAsync(x => x.id == id && !x.deleted);
-        if (a is null) return NotFound();
-
-        return Ok(new
+        var model = new PagedResult<ArticleListItemVm>
         {
-            Title = a.title,
-            Slug = a.slug,
-            Summary = a.summary,
-            Content = a.content,
-            CategoryId = a.category_id,
-            CoverImageUrl = a.cover_image_url,
-            IsPublished = a.is_published
-        });
-    }
-
-    // создать
-    [HttpPost]
-    public async Task<ActionResult> Create([FromBody] ArticleSaveDto dto)
-    {
-        if (string.IsNullOrWhiteSpace(dto.Title))
-            return BadRequest("Title is required");
-
-        var slug = string.IsNullOrWhiteSpace(dto.Slug) ? MakeSlug(dto.Title) : dto.Slug.Trim();
-
-        // проверка уникальности slug
-        var slugExists = await _db.articles.AnyAsync(x => x.slug == slug && !x.deleted);
-        if (slugExists) return Conflict("Slug already exists");
-
-        var nowLocal = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Unspecified); // TIMESTAMP (без TZ)
-
-        var a = new article
-        {
-            title = dto.Title.Trim(),
-            slug = slug,
-            summary = dto.Summary,
-            content = dto.Content,
-            category_id = dto.CategoryId,
-            cover_image_url = dto.CoverImageUrl,
-            is_published = dto.IsPublished,
-            published_at = dto.IsPublished ? nowLocal : null,
-            deleted = false
+            Items = items,
+            Total = total,
+            Page = page,
+            PageSize = 20
         };
 
-        _db.articles.Add(a);
-        await _db.SaveChangesAsync();
-
-        return CreatedAtAction(nameof(Get), new { id = a.id }, new { id = a.id });
+        return View("~/Pages/Consultant/Views/Index.cshtml", model);
     }
 
-    // обновить
-    [HttpPut("{id:int}")]
-    public async Task<IActionResult> Update(int id, [FromBody] ArticleSaveDto dto)
+    // GET: /consultant/articles/edit/{id?}
+    [Route("/consultant/articles/edit/{id?}")]
+    public async Task<IActionResult> Edit(int? id)
     {
-        var a = await _db.articles.FirstOrDefaultAsync(x => x.id == id && !x.deleted);
-        if (a is null) return NotFound();
+        var client = _httpClientFactory.CreateClient("CoffeeTeaApi");
 
-        a.title = dto.Title?.Trim() ?? a.title;
+        // Load categories
+        var categoriesResponse = await client.GetAsync("/api/admin/article-categories");
 
-        var newSlug = string.IsNullOrWhiteSpace(dto.Slug) ? MakeSlug(a.title) : dto.Slug.Trim();
-        if (!string.Equals(a.slug, newSlug, StringComparison.Ordinal))
+        // ДОБАВЬТЕ ПРОВЕРКУ ПУСТОГО ОТВЕТА:
+        if (!categoriesResponse.IsSuccessStatusCode)
         {
-            var slugBusy = await _db.articles.AnyAsync(x => x.id != id && x.slug == newSlug && !x.deleted);
-            if (slugBusy) return Conflict("Slug already exists");
-            a.slug = newSlug;
+            // Если запрос не удался, используем пустой список
+            ViewBag.Categories = new List<CategoryItemVm>();
+            TempData["Error"] = "Не удалось загрузить категории";
+        }
+        else
+        {
+            var categoriesJson = await categoriesResponse.Content.ReadAsStringAsync();
+
+            // ПРОВЕРЬТЕ, ЧТО ОТВЕТ НЕ ПУСТОЙ
+            if (!string.IsNullOrWhiteSpace(categoriesJson))
+            {
+                try
+                {
+                    var categories = JsonSerializer.Deserialize<List<CategoryItemVm>>(categoriesJson) ?? new();
+                    ViewBag.Categories = categories;
+                }
+                catch (JsonException)
+                {
+                    // Если JSON некорректен
+                    ViewBag.Categories = new List<CategoryItemVm>();
+                    TempData["Error"] = "Ошибка формата данных категорий";
+                }
+            }
+            else
+            {
+                ViewBag.Categories = new List<CategoryItemVm>();
+            }
         }
 
-        a.summary = dto.Summary;
-        a.content = dto.Content ?? a.content;
-        a.category_id = dto.CategoryId;
-        a.cover_image_url = dto.CoverImageUrl;
-
-        // публикация/снятие публикации (TIMESTAMP без TZ)
-        var nowLocal = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Unspecified);
-        if (!a.is_published && dto.IsPublished)
+        // Остальная часть метода...
+        if (id.HasValue)
         {
-            a.is_published = true;
-            a.published_at = nowLocal;
-        }
-        else if (a.is_published && !dto.IsPublished)
-        {
-            a.is_published = false;
-            a.published_at = null;
-        }
+            // Edit existing article
+            var response = await client.GetAsync($"/api/articles/{id.Value}");
+            if (!response.IsSuccessStatusCode)
+            {
+                return NotFound();
+            }
 
-        await _db.SaveChangesAsync();
-        return NoContent();
+            var json = await response.Content.ReadAsStringAsync();
+            var model = JsonSerializer.Deserialize<ArticleEditVm>(json);
+
+            if (model != null)
+            {
+                model.Id = id.Value;
+            }
+
+            return View("~/Pages/Consultant/Views/Edit.cshtml", model);
+        }
+        else
+        {
+            // Create new article
+            return View("~/Pages/Consultant/Views/Edit.cshtml", new ArticleEditVm());
+        }
     }
 
-    // удалить (soft)
-    [HttpDelete("{id:int}")]
-    public async Task<IActionResult> Delete(int id)
+    // POST: /consultant/articles/save
+    [HttpPost]
+    [Route("/consultant/articles/save")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Save(
+        [FromForm] int? id,
+        [FromForm] string title,
+        [FromForm] string? slug,
+        [FromForm] string? summary,
+        [FromForm] string content,
+        [FromForm] int? categoryId,
+        [FromForm] string? coverImageUrl,
+        [FromForm] bool isPublished = false)
     {
-        var a = await _db.articles.FirstOrDefaultAsync(x => x.id == id && !x.deleted);
-        if (a is null) return NotFound();
-        a.deleted = true;
-        await _db.SaveChangesAsync();
-        return NoContent();
+        var client = _httpClientFactory.CreateClient("CoffeeTeaApi");
+
+        var dto = new
+        {
+            Title = title,
+            Slug = slug ?? "",
+            Summary = summary,
+            Content = content,
+            CategoryId = categoryId,
+            CoverImageUrl = coverImageUrl,
+            IsPublished = isPublished
+        };
+
+        var jsonContent = new StringContent(
+            JsonSerializer.Serialize(dto),
+            Encoding.UTF8,
+            "application/json");
+
+        HttpResponseMessage response;
+
+        if (id.HasValue && id.Value > 0)
+        {
+            // Update existing
+            response = await client.PutAsync($"/api/articles/{id.Value}", jsonContent);
+        }
+        else
+        {
+            // Create new
+            response = await client.PostAsync("/api/articles", jsonContent);
+        }
+
+        if (response.IsSuccessStatusCode)
+        {
+            return RedirectToAction("Articles");
+        }
+
+        TempData["Error"] = "Ошибка при сохранении статьи";
+        return RedirectToAction("Edit", new { id });
     }
 
-    private static string MakeSlug(string title)
+    // POST: /consultant/articles/delete
+    [HttpPost]
+    [Route("/consultant/articles/delete")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Delete([FromForm] int id)
     {
-        var s = title.ToLowerInvariant();
-        var arr = s.Select(ch => char.IsLetterOrDigit(ch) ? ch : '-').ToArray();
-        var slug = new string(arr).Trim('-');
-        while (slug.Contains("--")) slug = slug.Replace("--", "-");
-        return string.IsNullOrWhiteSpace(slug) ? $"post-{Guid.NewGuid():N}" : slug;
+        var client = _httpClientFactory.CreateClient("CoffeeTeaApi");
+        var response = await client.DeleteAsync($"/api/articles/{id}");
+
+        if (response.IsSuccessStatusCode)
+        {
+            TempData["Success"] = "Статья удалена";
+        }
+        else
+        {
+            TempData["Error"] = "Ошибка при удалении статьи";
+        }
+
+        return RedirectToAction("Articles");
     }
 }
